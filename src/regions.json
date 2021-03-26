@@ -1,0 +1,57 @@
+[
+  { "id": "FZUe47mEY9PCOzYmMxzYY", "region": "All" },
+  {
+    "id": "MywTm4_IEp2XZtAfPKRGg",
+    "region": "Asia",
+    "subregions": [
+      "Southern Asia",
+      "Western Asia",
+      "South-Eastern Asia",
+      "Eastern Asia",
+      "Central Asia"
+    ]
+  },
+  {
+    "id": "qxmsAgkNwgqb5xqff-ddc",
+    "region": "Europe",
+    "subregions": [
+      "Northern Europe",
+      "Southern Europe",
+      "Western Europe",
+      "Eastern Europe"
+    ]
+  },
+  {
+    "id": "p3QkwaBBJbQm4-oi_qzIQ",
+    "region": "Africa",
+    "subregions": [
+      "Northern Africa",
+      "Middle Africa",
+      "Western Africa",
+      "Southern Africa",
+      "Eastern Africa"
+    ]
+  },
+  {
+    "id": "3HyqK4xy8_nAO7Up9TwSN",
+    "region": "Oceania",
+    "subregions": [
+      "Polynesia",
+      "Australia and New Zealand",
+      "Melanesia",
+      "Micronesia"
+    ]
+  },
+  {
+    "id": "oEXPulND1myYNkk691COU",
+    "region": "Americas",
+    "subregions": [
+      "Caribbean",
+      "South America",
+      "Central America",
+      "Northern America"
+    ]
+  },
+  { "id": "Tnrp40V1CE3AB_yBKxmxK", "region": "Polar" },
+  { "id": "Tnrp40V1CE3AB_yBKxmx1", "region": "Other" }
+]

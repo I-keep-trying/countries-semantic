@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "znEatvoJRu2abE910HFAC",
+    "name": "Afghanistan",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/afg.svg"
+  },
+  {
+    "id": "WY_1sOck2DWClMqlVdtfH",
+    "name": "Åland Islands",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/ala.svg"
+  },
+  {
+    "id": "8bhOABHaovTTnQzIr4Jtw",
+    "name": "Albania",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/alb.svg"
+  },
+  {
+    "id": "KcZcOoCzCK7XltZh_hQ7G",
+    "name": "Algeria",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/dza.svg"
+  },
+  {
+    "id": "iGYCErerLOMA-5m_zu3uK",
+    "name": "American Samoa",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/asm.svg"
+  },
+  {
+    "id": "5nRoWdeoA2NujcVOzgXHw",
+    "name": "Andorra",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/and.svg"
+  },
+  {
+    "id": "DbdDm9WtPDYPZDLTZKejT",
+    "name": "Angola",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/ago.svg"
+  },
+  {
+    "id": "bzDqtnnP8GD41rRQ03qbs",
+    "name": "Anguilla",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/aia.svg"
+  },
+  {
+    "id": "AoFNwFMCAsLEdv9fyKkL9",
+    "name": "Antarctica",
+    "region": "Polar",
+    "subregion": "",
+    "flag": "https://restcountries.eu/data/ata.svg"
+  },
+  {
+    "id": "ope-7WTl72D1qWwF6kDuG",
+    "name": "Antigua and Barbuda",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/atg.svg"
+  },
+  {
+    "id": "bvfmJUo3mmU0Keaong5pD",
+    "name": "Argentina",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/arg.svg"
+  },
+  {
+    "id": "talEtbvKNsyuYUEsjf_zf",
+    "name": "Armenia",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/arm.svg"
+  },
+  {
+    "id": "2enFxpmGy06jrLMFiw0BS",
+    "name": "Aruba",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/abw.svg"
+  },
+  {
+    "id": "e4F3DhpKMAeF_4xoTy514",
+    "name": "Australia",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "flag": "https://restcountries.eu/data/aus.svg"
+  },
+  {
+    "id": "vLiVrNlWn-ekXM40H8lw1",
+    "name": "Austria",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/aut.svg"
+  },
+  {
+    "id": "6vS4EtCqcczPCWUN31_X6",
+    "name": "Azerbaijan",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/aze.svg"
+  },
+  {
+    "id": "_1iDrwrAx_f9UrJ0SguqK",
+    "name": "Bahamas",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/bhs.svg"
+  },
+  {
+    "id": "gOMT4H1AIQ-_9kjvpIEIi",
+    "name": "Bahrain",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/bhr.svg"
+  },
+  {
+    "id": "K-_Y7XA6T_UQZ3T5FukJB",
+    "name": "Bangladesh",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/bgd.svg"
+  },
+  {
+    "id": "rqH3dS3J_zbjO9x0P45VX",
+    "name": "Barbados",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/brb.svg"
+  },
+  {
+    "id": "MARQGuhr5ZmQYD7EYEZbK",
+    "name": "Belarus",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/blr.svg"
+  },
+  {
+    "id": "V3LwqIjEiNOO-qFlhq0KP",
+    "name": "Belgium",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/bel.svg"
+  },
+  {
+    "id": "6Bbcrb1IOqeEFs3aNpeNN",
+    "name": "Belize",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/blz.svg"
+  },
+  {
+    "id": "yosO0d-Kw8siDf-l9ieuq",
+    "name": "Benin",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/ben.svg"
+  },
+  {
+    "id": "0iAiNHUZn5JbwDF5p0CUM",
+    "name": "Bermuda",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "flag": "https://restcountries.eu/data/bmu.svg"
+  },
+  {
+    "id": "dhEoaYUfxvceTbeoR0zwN",
+    "name": "Bhutan",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/btn.svg"
+  },
+  {
+    "id": "_oRvMFXiqG2_-0_OiVChG",
+    "name": "Bolivia (Plurinational State of)",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/bol.svg"
+  },
+  {
+    "id": "md80y7lnYQNqDsKhH_H7I",
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/bes.svg"
+  },
+  {
+    "id": "nmvJCRV6hOQmtlGSEeCBH",
+    "name": "Bosnia and Herzegovina",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/bih.svg"
+  },
+  {
+    "id": "41SvrYGe3NzVweDRsO1co",
+    "name": "Botswana",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "flag": "https://restcountries.eu/data/bwa.svg"
+  },
+  {
+    "id": "GqyXViiubPng5hQJqvRjx",
+    "name": "Bouvet Island",
+    "region": "",
+    "subregion": "",
+    "flag": "https://restcountries.eu/data/bvt.svg"
+  },
+  {
+    "id": "DSJjV0PAHkOPWzM57-AHK",
+    "name": "Brazil",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/bra.svg"
+  },
+  {
+    "id": "ypLzk7jRkUXLNTUGGa0mw",
+    "name": "British Indian Ocean Territory",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/iot.svg"
+  },
+  {
+    "id": "AEmQoXe3F5clsrWJpCswu",
+    "name": "United States Minor Outlying Islands",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "flag": "https://restcountries.eu/data/umi.svg"
+  },
+  {
+    "id": "U9cvKrFp05heEL2fyPSiy",
+    "name": "Virgin Islands (British)",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/vgb.svg"
+  },
+  {
+    "id": "HkicSjqJ0GH_uGUA5xYIS",
+    "name": "Virgin Islands (U.S.)",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/vir.svg"
+  },
+  {
+    "id": "zvJ5IoeeBapPO_v2_E58b",
+    "name": "Brunei Darussalam",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/brn.svg"
+  },
+  {
+    "id": "Z-B6GTmHHEimVAkevpWnR",
+    "name": "Bulgaria",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/bgr.svg"
+  },
+  {
+    "id": "msbKcJG782p2_exJq_vQl",
+    "name": "Burkina Faso",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/bfa.svg"
+  },
+  {
+    "id": "y8moEtULetvri8M17Y0BP",
+    "name": "Burundi",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/bdi.svg"
+  },
+  {
+    "id": "FPnm81xlwu5Oy5YLH5I3r",
+    "name": "Cambodia",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/khm.svg"
+  },
+  {
+    "id": "ph2EV0tSn2WjTFHC_0fLI",
+    "name": "Cameroon",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/cmr.svg"
+  },
+  {
+    "id": "x5B8nZpN7Ag40WaW2B3eY",
+    "name": "Canada",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "flag": "https://restcountries.eu/data/can.svg"
+  },
+  {
+    "id": "XeSiEbotYp4VmEJnS7fUq",
+    "name": "Cabo Verde",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/cpv.svg"
+  },
+  {
+    "id": "60dU7dESl-GKwJQBcrXoi",
+    "name": "Cayman Islands",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/cym.svg"
+  },
+  {
+    "id": "WHH9aCvnyaZVz-NZ3zi9x",
+    "name": "Central African Republic",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/caf.svg"
+  },
+  {
+    "id": "ieMdAFpZj6x7U1RAPgOm1",
+    "name": "Chad",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/tcd.svg"
+  },
+  {
+    "id": "xIGYf8I5mZihgo_5r6dCO",
+    "name": "Chile",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/chl.svg"
+  },
+  {
+    "id": "pkrhBSyKFeivEhIKb1A_Q",
+    "name": "China",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/chn.svg"
+  },
+  {
+    "id": "ya9kuON1QB2bdwKcL5KfT",
+    "name": "Christmas Island",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "flag": "https://restcountries.eu/data/cxr.svg"
+  },
+  {
+    "id": "LDtm8GxTZgNgSEZWALauC",
+    "name": "Cocos (Keeling) Islands",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "flag": "https://restcountries.eu/data/cck.svg"
+  },
+  {
+    "id": "wpGdj_8Lsd3Wr7i1dCb7J",
+    "name": "Colombia",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/col.svg"
+  },
+  {
+    "id": "nIMUANZw8ARzUgdx783g_",
+    "name": "Comoros",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/com.svg"
+  },
+  {
+    "id": "qjMT-q1GFgN41Ok_uBrKh",
+    "name": "Congo",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/cog.svg"
+  },
+  {
+    "id": "NTwb7hH2vhoZ0dClNHGXG",
+    "name": "Congo (Democratic Republic of the)",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/cod.svg"
+  },
+  {
+    "id": "bh9GWQO5DWfoikpIALXSh",
+    "name": "Cook Islands",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/cok.svg"
+  },
+  {
+    "id": "1FA_qyyRXz_Ewf7g63GOq",
+    "name": "Costa Rica",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/cri.svg"
+  },
+  {
+    "id": "eDkBN-mvJ_h83gIr_dq1B",
+    "name": "Croatia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/hrv.svg"
+  },
+  {
+    "id": "hdlVbI2Ov07aRp3Bw4tte",
+    "name": "Cuba",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/cub.svg"
+  },
+  {
+    "id": "Iyox_lo3JPkroXo0ACqcU",
+    "name": "Curaçao",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/cuw.svg"
+  },
+  {
+    "id": "4gdMy83CPmGMP_am0N_ee",
+    "name": "Cyprus",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/cyp.svg"
+  },
+  {
+    "id": "nFnNJzI3KNx-8dINt-4Kk",
+    "name": "Czech Republic",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/cze.svg"
+  },
+  {
+    "id": "NsutJm7lvtBYHmX6Ji8dC",
+    "name": "Denmark",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/dnk.svg"
+  },
+  {
+    "id": "Hb5hSRrxUAe_ufR6qZHdf",
+    "name": "Djibouti",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/dji.svg"
+  },
+  {
+    "id": "fNoZrkijNvkHDveXZkMlT",
+    "name": "Dominica",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/dma.svg"
+  },
+  {
+    "id": "YYqCkgJ7RPRh879pO5PbJ",
+    "name": "Dominican Republic",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/dom.svg"
+  },
+  {
+    "id": "Tu723eCFhANu2_Pt694Ph",
+    "name": "Ecuador",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/ecu.svg"
+  },
+  {
+    "id": "k8X_TKEz7kCaPO8EY55Tz",
+    "name": "Egypt",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/egy.svg"
+  },
+  {
+    "id": "IU21iGlEsRNse83ZGfrlY",
+    "name": "El Salvador",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/slv.svg"
+  },
+  {
+    "id": "A1yhDQQKXL2MISvm-y29W",
+    "name": "Equatorial Guinea",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/gnq.svg"
+  },
+  {
+    "id": "IcbG8iLpULo1sl3RHsp1J",
+    "name": "Eritrea",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/eri.svg"
+  },
+  {
+    "id": "jjeyvYuhgZ6vPPN6DHI1J",
+    "name": "Estonia",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/est.svg"
+  },
+  {
+    "id": "EZK0oszv_Qcw9I0HAmjAc",
+    "name": "Ethiopia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/eth.svg"
+  },
+  {
+    "id": "1eHPOGlb0IqRglj8KsXqz",
+    "name": "Falkland Islands (Malvinas)",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/flk.svg"
+  },
+  {
+    "id": "vrsYeOpQQBghbVv3urSI-",
+    "name": "Faroe Islands",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/fro.svg"
+  },
+  {
+    "id": "7cpYDLX_59ZXRjNpQi0-a",
+    "name": "Fiji",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "flag": "https://restcountries.eu/data/fji.svg"
+  },
+  {
+    "id": "FYwPn29ksYOJtwjxrxG_h",
+    "name": "Finland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/fin.svg"
+  },
+  {
+    "id": "alGkjcnhlikPevdq70m8D",
+    "name": "France",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/fra.svg"
+  },
+  {
+    "id": "OZb8qdJjWi76LNPwWf9xt",
+    "name": "French Guiana",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/guf.svg"
+  },
+  {
+    "id": "XxLxTdViA3c0oonoA9eNc",
+    "name": "French Polynesia",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/pyf.svg"
+  },
+  {
+    "id": "d9XHyReHt6Hovo3qY6Uay",
+    "name": "French Southern Territories",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "flag": "https://restcountries.eu/data/atf.svg"
+  },
+  {
+    "id": "Z7BjfbP97J6sHvHCrwu3V",
+    "name": "Gabon",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/gab.svg"
+  },
+  {
+    "id": "4Wwwa-PDOdRzgG_IS-SVR",
+    "name": "Gambia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/gmb.svg"
+  },
+  {
+    "id": "6whynKc_tAI0akBqUgd31",
+    "name": "Georgia",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/geo.svg"
+  },
+  {
+    "id": "Kzs-L8H8q0XZniFqU-FpK",
+    "name": "Germany",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/deu.svg"
+  },
+  {
+    "id": "ldwETo1RzRvCdZaMgvGRD",
+    "name": "Ghana",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/gha.svg"
+  },
+  {
+    "id": "-BqM2VjnolB1gNxeDslJN",
+    "name": "Gibraltar",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/gib.svg"
+  },
+  {
+    "id": "SSvL_fSJcYyqrNs09oGZP",
+    "name": "Greece",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/grc.svg"
+  },
+  {
+    "id": "xV7ZWOS8eJbLiYyL83ZXa",
+    "name": "Greenland",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "flag": "https://restcountries.eu/data/grl.svg"
+  },
+  {
+    "id": "T5yXlTkZv7F6SIU_qoc5m",
+    "name": "Grenada",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/grd.svg"
+  },
+  {
+    "id": "3hUwwvD17At5VgEwOh7YQ",
+    "name": "Guadeloupe",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/glp.svg"
+  },
+  {
+    "id": "t5WbYffIvZ3UEZ1iTYDPP",
+    "name": "Guam",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/gum.svg"
+  },
+  {
+    "id": "NIJ5GW31BejrhlnixeLrf",
+    "name": "Guatemala",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/gtm.svg"
+  },
+  {
+    "id": "AcCz80HEE9DnN59tdkRju",
+    "name": "Guernsey",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/ggy.svg"
+  },
+  {
+    "id": "aMFJF6hNa6h8i7NLiJiZu",
+    "name": "Guinea",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/gin.svg"
+  },
+  {
+    "id": "qTjIhCkPWFZsySgza6hLi",
+    "name": "Guinea-Bissau",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/gnb.svg"
+  },
+  {
+    "id": "_dysb5e6mibutmVdwqi5f",
+    "name": "Guyana",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/guy.svg"
+  },
+  {
+    "id": "SL54a0Ad1_gxQYaXU4EP2",
+    "name": "Haiti",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/hti.svg"
+  },
+  {
+    "id": "KouEajFZ5e9UTtYNZ9tBr",
+    "name": "Heard Island and McDonald Islands",
+    "region": "",
+    "subregion": "",
+    "flag": "https://restcountries.eu/data/hmd.svg"
+  },
+  {
+    "id": "sxg4gVJxNXH-XxcFsWqjp",
+    "name": "Holy See",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/vat.svg"
+  },
+  {
+    "id": "guxKr8OIA-7op8RsbTYxZ",
+    "name": "Honduras",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/hnd.svg"
+  },
+  {
+    "id": "gj7PLCryRjaEs4AJNb0Fz",
+    "name": "Hong Kong",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/hkg.svg"
+  },
+  {
+    "id": "kfVj38MdcSEIv0ofxUyVU",
+    "name": "Hungary",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/hun.svg"
+  },
+  {
+    "id": "cS5M2lz6xJ5uBQKViklSh",
+    "name": "Iceland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/isl.svg"
+  },
+  {
+    "id": "bL10Gbqno8ayocBFzieQd",
+    "name": "India",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/ind.svg"
+  },
+  {
+    "id": "qWC2QceREVS69EL_oStoT",
+    "name": "Indonesia",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/idn.svg"
+  },
+  {
+    "id": "x07wPXq22w2N-BPY50cH4",
+    "name": "Côte d'Ivoire",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/civ.svg"
+  },
+  {
+    "id": "FwyE0yfdrLi_ww2MDMHjJ",
+    "name": "Iran (Islamic Republic of)",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/irn.svg"
+  },
+  {
+    "id": "_EbzHQVDhUWqf1gD9vFaU",
+    "name": "Iraq",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/irq.svg"
+  },
+  {
+    "id": "f8x1EQ3pRpD9WQTBC_afg",
+    "name": "Ireland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/irl.svg"
+  },
+  {
+    "id": "c1TbjHsKzPBWwNEyXgM-u",
+    "name": "Isle of Man",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/imn.svg"
+  },
+  {
+    "id": "EGs-S6wyq6mzzW1hwcmdu",
+    "name": "Israel",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/isr.svg"
+  },
+  {
+    "id": "5L79eL3cRf6FnpX8fViRA",
+    "name": "Italy",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/ita.svg"
+  },
+  {
+    "id": "eFbQCTD52zvqGZpgvQ0B6",
+    "name": "Jamaica",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/jam.svg"
+  },
+  {
+    "id": "5bZRJ3wfdUbEqDIbFfOto",
+    "name": "Japan",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/jpn.svg"
+  },
+  {
+    "id": "uNB6wBmBqQxsSUznpR-sP",
+    "name": "Jersey",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/jey.svg"
+  },
+  {
+    "id": "Ngo2CxkllcE7Ypqg5DwlT",
+    "name": "Jordan",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/jor.svg"
+  },
+  {
+    "id": "sLWJZiwpYpsvx6UcNqPao",
+    "name": "Kazakhstan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "flag": "https://restcountries.eu/data/kaz.svg"
+  },
+  {
+    "id": "lqUFE18fX7Kscl57HIZyU",
+    "name": "Kenya",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/ken.svg"
+  },
+  {
+    "id": "MBTNLtPcGanWDgCFG9x1G",
+    "name": "Kiribati",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/kir.svg"
+  },
+  {
+    "id": "eQhcngBQMLDvOc_toLIeN",
+    "name": "Kuwait",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/kwt.svg"
+  },
+  {
+    "id": "yqUao0VCl8c-zoS-Z_dSo",
+    "name": "Kyrgyzstan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "flag": "https://restcountries.eu/data/kgz.svg"
+  },
+  {
+    "id": "0z322K1kCVfInJsPcnFHp",
+    "name": "Lao People's Democratic Republic",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/lao.svg"
+  },
+  {
+    "id": "6-sHOmsW8YlNjTnL1Mo_H",
+    "name": "Latvia",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/lva.svg"
+  },
+  {
+    "id": "W6-aaySKUqYQVe-P7-NP3",
+    "name": "Lebanon",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/lbn.svg"
+  },
+  {
+    "id": "rH6vjOizSE_6jJv2s5GMd",
+    "name": "Lesotho",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "flag": "https://restcountries.eu/data/lso.svg"
+  },
+  {
+    "id": "033b5CQq2sZpVwpooaQdw",
+    "name": "Liberia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/lbr.svg"
+  },
+  {
+    "id": "HW5xgagapX-WjYFrEy0C4",
+    "name": "Libya",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/lby.svg"
+  },
+  {
+    "id": "80V0ntWU9obmOOBq6rqza",
+    "name": "Liechtenstein",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/lie.svg"
+  },
+  {
+    "id": "g3KR0axLZXUK_lRoXUfEG",
+    "name": "Lithuania",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/ltu.svg"
+  },
+  {
+    "id": "HyPuCLw8RbCWCnzgfEEZJ",
+    "name": "Luxembourg",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/lux.svg"
+  },
+  {
+    "id": "WkxFy3mNwJaE-ClrBvCDv",
+    "name": "Macao",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/mac.svg"
+  },
+  {
+    "id": "cYjbeQvDdqxyyif7dVw25",
+    "name": "Macedonia (the former Yugoslav Republic of)",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/mkd.svg"
+  },
+  {
+    "id": "U6uV0NoOkgziaL7erOdVF",
+    "name": "Madagascar",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/mdg.svg"
+  },
+  {
+    "id": "EIrpYnIus6Or0aWNasfWX",
+    "name": "Malawi",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/mwi.svg"
+  },
+  {
+    "id": "tpF5czRu0mouWzbFMwIxL",
+    "name": "Malaysia",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/mys.svg"
+  },
+  {
+    "id": "-qicmUW0YOetJ0tvy6hjf",
+    "name": "Maldives",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/mdv.svg"
+  },
+  {
+    "id": "3hTrBlKCqfJdZ8EaUJEZd",
+    "name": "Mali",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/mli.svg"
+  },
+  {
+    "id": "URPS8AbE6gHyvL_78gwib",
+    "name": "Malta",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/mlt.svg"
+  },
+  {
+    "id": "kIRXrUyVibO7H4OkgP1OA",
+    "name": "Marshall Islands",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/mhl.svg"
+  },
+  {
+    "id": "w6P24Zzf-yudp1nXqui_3",
+    "name": "Martinique",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/mtq.svg"
+  },
+  {
+    "id": "QTevYh55QKVllEZYuDj_N",
+    "name": "Mauritania",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/mrt.svg"
+  },
+  {
+    "id": "ODElfga_viCm65uATf-cO",
+    "name": "Mauritius",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/mus.svg"
+  },
+  {
+    "id": "aDceyhClCgMNwDlOaAkEY",
+    "name": "Mayotte",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/myt.svg"
+  },
+  {
+    "id": "fQnR6kU4ZggI-M6cIrv4-",
+    "name": "Mexico",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/mex.svg"
+  },
+  {
+    "id": "NOxMhUsikqaHtwvfjc3KY",
+    "name": "Micronesia (Federated States of)",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/fsm.svg"
+  },
+  {
+    "id": "8QS425N31IrGG_bVyW1GA",
+    "name": "Moldova (Republic of)",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/mda.svg"
+  },
+  {
+    "id": "3_TnQ-SUal-0v000kWIgh",
+    "name": "Monaco",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/mco.svg"
+  },
+  {
+    "id": "i2d4l2sbW__a5aHKSJ2Gu",
+    "name": "Mongolia",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/mng.svg"
+  },
+  {
+    "id": "ONEDSRgCXyIHojQtxTKDy",
+    "name": "Montenegro",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/mne.svg"
+  },
+  {
+    "id": "29fEg36K9LUm1RX5pIFmB",
+    "name": "Montserrat",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/msr.svg"
+  },
+  {
+    "id": "rAUqQiEkDrkON1bfJB_Hq",
+    "name": "Morocco",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/mar.svg"
+  },
+  {
+    "id": "hAV5KDEpJdUAItK4QiLJx",
+    "name": "Mozambique",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/moz.svg"
+  },
+  {
+    "id": "aYbWvafYt25_PT0NOZax0",
+    "name": "Myanmar",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/mmr.svg"
+  },
+  {
+    "id": "qomDIp-FQGBgHh0sozje-",
+    "name": "Namibia",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "flag": "https://restcountries.eu/data/nam.svg"
+  },
+  {
+    "id": "d1m4ttt-ZS3RKSsrf0aZG",
+    "name": "Nauru",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/nru.svg"
+  },
+  {
+    "id": "QRqtD6EbA3qIynzJS1TIT",
+    "name": "Nepal",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/npl.svg"
+  },
+  {
+    "id": "4niaydZ_EC8j90nIYP34b",
+    "name": "Netherlands",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/nld.svg"
+  },
+  {
+    "id": "Dio6Kf0YIkH3x6afwxuwf",
+    "name": "New Caledonia",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "flag": "https://restcountries.eu/data/ncl.svg"
+  },
+  {
+    "id": "nC37xZH-PoVoozwkV49hw",
+    "name": "New Zealand",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "flag": "https://restcountries.eu/data/nzl.svg"
+  },
+  {
+    "id": "_a6-19iU8RudO5G2p-4vr",
+    "name": "Nicaragua",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/nic.svg"
+  },
+  {
+    "id": "NolCUPqyMBF1oHaeAoOfP",
+    "name": "Niger",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/ner.svg"
+  },
+  {
+    "id": "nOgbOKZvCsBQNmHKj0mf9",
+    "name": "Nigeria",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/nga.svg"
+  },
+  {
+    "id": "_fOCm2vleHUTkM7rQFxt_",
+    "name": "Niue",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/niu.svg"
+  },
+  {
+    "id": "atRHAGr0MoTNCX63Axc8r",
+    "name": "Norfolk Island",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "flag": "https://restcountries.eu/data/nfk.svg"
+  },
+  {
+    "id": "XlZU5W8f1tXScpx3qJIdv",
+    "name": "Korea (Democratic People's Republic of)",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/prk.svg"
+  },
+  {
+    "id": "WC1vb5YNJGQxYQotZd8kp",
+    "name": "Northern Mariana Islands",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/mnp.svg"
+  },
+  {
+    "id": "OsI_NQE8sRU5mRLcHLZKn",
+    "name": "Norway",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/nor.svg"
+  },
+  {
+    "id": "9SLbFar_cBfirz8IUc5vT",
+    "name": "Oman",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/omn.svg"
+  },
+  {
+    "id": "P7BzSSlqjBudnNa8T_nX5",
+    "name": "Pakistan",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/pak.svg"
+  },
+  {
+    "id": "9HGS0ThMEgeXgIgPug6mV",
+    "name": "Palau",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "flag": "https://restcountries.eu/data/plw.svg"
+  },
+  {
+    "id": "reCHanlerfRQQBFHwiw3H",
+    "name": "Palestine, State of",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/pse.svg"
+  },
+  {
+    "id": "bE_JyH5zdjmVweS0BTItC",
+    "name": "Panama",
+    "region": "Americas",
+    "subregion": "Central America",
+    "flag": "https://restcountries.eu/data/pan.svg"
+  },
+  {
+    "id": "ox2MORxByh5L2GmB-xUsA",
+    "name": "Papua New Guinea",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "flag": "https://restcountries.eu/data/png.svg"
+  },
+  {
+    "id": "qF8qCJjqrRsg0GP1ODpFf",
+    "name": "Paraguay",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/pry.svg"
+  },
+  {
+    "id": "_qCnyZvxiAClJ4MeuhnH7",
+    "name": "Peru",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/per.svg"
+  },
+  {
+    "id": "tAGypKbTx9UzwUYNqpIzw",
+    "name": "Philippines",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/phl.svg"
+  },
+  {
+    "id": "MDNuf5fI7yw-TmTzXiHKx",
+    "name": "Pitcairn",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/pcn.svg"
+  },
+  {
+    "id": "-795-1htgc0LNJ_3jX005",
+    "name": "Poland",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/pol.svg"
+  },
+  {
+    "id": "QYRYCoR69ds-Fmgfsg-hR",
+    "name": "Portugal",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/prt.svg"
+  },
+  {
+    "id": "bQKt88ukdpWZSQAIdItBZ",
+    "name": "Puerto Rico",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/pri.svg"
+  },
+  {
+    "id": "RYo5KKk0c1fYcRQ8BukSh",
+    "name": "Qatar",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/qat.svg"
+  },
+  {
+    "id": "c5wSt76q3wZdBct9rXwE3",
+    "name": "Republic of Kosovo",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/kos.svg"
+  },
+  {
+    "id": "c8qiPPE_69Wy4ntOh3peq",
+    "name": "Réunion",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/reu.svg"
+  },
+  {
+    "id": "ZBXlEW3acLTlLQtdrYVuP",
+    "name": "Romania",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/rou.svg"
+  },
+  {
+    "id": "flY0I4KT1uqR6YuotJnl1",
+    "name": "Russian Federation",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/rus.svg"
+  },
+  {
+    "id": "v4C2VFpTqsuw6W4FUOSin",
+    "name": "Rwanda",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/rwa.svg"
+  },
+  {
+    "id": "BTvFVKWcWGOILnhpy0kSt",
+    "name": "Saint Barthélemy",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/blm.svg"
+  },
+  {
+    "id": "AxTqb6OgTrt6Mj8Fo7YK9",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/shn.svg"
+  },
+  {
+    "id": "FG9uzwYqsJEpYNEFHUG3L",
+    "name": "Saint Kitts and Nevis",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/kna.svg"
+  },
+  {
+    "id": "ZWtYAcOqObzQ2O1XdB1v7",
+    "name": "Saint Lucia",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/lca.svg"
+  },
+  {
+    "id": "zQDcodDI50pBkwBo5L0qi",
+    "name": "Saint Martin (French part)",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/maf.svg"
+  },
+  {
+    "id": "7LtLY8WjCckV5VRVI8kgv",
+    "name": "Saint Pierre and Miquelon",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "flag": "https://restcountries.eu/data/spm.svg"
+  },
+  {
+    "id": "AwKlvrIPRXJjeZI6HggUa",
+    "name": "Saint Vincent and the Grenadines",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/vct.svg"
+  },
+  {
+    "id": "EK-rSGEvncAfZqqMB4feF",
+    "name": "Samoa",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/wsm.svg"
+  },
+  {
+    "id": "wdnQ0Z0ALlVozFAQfPA9Z",
+    "name": "San Marino",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/smr.svg"
+  },
+  {
+    "id": "vb0qQ4Sc1CvN5VKM8rL8B",
+    "name": "Sao Tome and Principe",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/stp.svg"
+  },
+  {
+    "id": "Yt5yZwP4LtnvUbX6fMIT7",
+    "name": "Saudi Arabia",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/sau.svg"
+  },
+  {
+    "id": "wDVE1IS0mV-ynJwNLQOwc",
+    "name": "Senegal",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/sen.svg"
+  },
+  {
+    "id": "o6VWsl880ongnAs_0MmlR",
+    "name": "Serbia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/srb.svg"
+  },
+  {
+    "id": "p5P5-t2jg-fygA3iCxtdE",
+    "name": "Seychelles",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/syc.svg"
+  },
+  {
+    "id": "JkIqxlZJX4BsUhKfbMcSw",
+    "name": "Sierra Leone",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/sle.svg"
+  },
+  {
+    "id": "HHVZTqiYfBagc_2lTKcEM",
+    "name": "Singapore",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/sgp.svg"
+  },
+  {
+    "id": "IDC5ybMyMvE6F-ejrL0qA",
+    "name": "Sint Maarten (Dutch part)",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/sxm.svg"
+  },
+  {
+    "id": "-1hG1uUDPMbMqUiaFiXmM",
+    "name": "Slovakia",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/svk.svg"
+  },
+  {
+    "id": "gCEbWvzcgr8Ep-gm0buHn",
+    "name": "Slovenia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/svn.svg"
+  },
+  {
+    "id": "cEJr04iK3vO_giHf6zE9G",
+    "name": "Solomon Islands",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "flag": "https://restcountries.eu/data/slb.svg"
+  },
+  {
+    "id": "Gvg9snXiwzBxpEKlM_Eyz",
+    "name": "Somalia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/som.svg"
+  },
+  {
+    "id": "lPyJ_kQGc2qkIh2mWoURW",
+    "name": "South Africa",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "flag": "https://restcountries.eu/data/zaf.svg"
+  },
+  {
+    "id": "KAS3MKpfU01GlV_raz7c2",
+    "name": "South Georgia and the South Sandwich Islands",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/sgs.svg"
+  },
+  {
+    "id": "kQwpdFoZl4TSs9NIfInD_",
+    "name": "Korea (Republic of)",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/kor.svg"
+  },
+  {
+    "id": "UCypZl4Zo6FgWgCHsGU8C",
+    "name": "South Sudan",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "flag": "https://restcountries.eu/data/ssd.svg"
+  },
+  {
+    "id": "3JQcVkiNk6fY-7HrJ41C1",
+    "name": "Spain",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "flag": "https://restcountries.eu/data/esp.svg"
+  },
+  {
+    "id": "0gMW3Q9wp2d6eAtkM5vZi",
+    "name": "Sri Lanka",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "flag": "https://restcountries.eu/data/lka.svg"
+  },
+  {
+    "id": "Fh9jk5fDnxf7JgDP-oul6",
+    "name": "Sudan",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/sdn.svg"
+  },
+  {
+    "id": "m_Z9j2ApM97Zwwlb1jBJ7",
+    "name": "Suriname",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/sur.svg"
+  },
+  {
+    "id": "kcwfdm4V9G6yRATTKUoQ3",
+    "name": "Svalbard and Jan Mayen",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/sjm.svg"
+  },
+  {
+    "id": "R8ja6zWqaqf2ytm7vhklM",
+    "name": "Swaziland",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "flag": "https://restcountries.eu/data/swz.svg"
+  },
+  {
+    "id": "KbpbENxqh8kETKifZxYQR",
+    "name": "Sweden",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/swe.svg"
+  },
+  {
+    "id": "WjDa2KJRCEPCe3jxIBFAi",
+    "name": "Switzerland",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "flag": "https://restcountries.eu/data/che.svg"
+  },
+  {
+    "id": "ZX6kBO2he4VE4J7LfAWuY",
+    "name": "Syrian Arab Republic",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/syr.svg"
+  },
+  {
+    "id": "NZLWDFUOZRA9bnt0c90Z6",
+    "name": "Taiwan",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "flag": "https://restcountries.eu/data/twn.svg"
+  },
+  {
+    "id": "6tBLikHu4p8t0CAABvrnE",
+    "name": "Tajikistan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "flag": "https://restcountries.eu/data/tjk.svg"
+  },
+  {
+    "id": "WnnUaRHyk372LTTEgB2Al",
+    "name": "Tanzania, United Republic of",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/tza.svg"
+  },
+  {
+    "id": "0zMCwbSD02QTjPVMlfQnf",
+    "name": "Thailand",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/tha.svg"
+  },
+  {
+    "id": "UxyVsPnlVo7Sa-omzX2nW",
+    "name": "Timor-Leste",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/tls.svg"
+  },
+  {
+    "id": "30ax7rWBOzyP2svqSQG0M",
+    "name": "Togo",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "flag": "https://restcountries.eu/data/tgo.svg"
+  },
+  {
+    "id": "NHOyUELluH951fW-uaanm",
+    "name": "Tokelau",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/tkl.svg"
+  },
+  {
+    "id": "t32Wh4LzP89Jo2S9ZNxyz",
+    "name": "Tonga",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/ton.svg"
+  },
+  {
+    "id": "LrkPc4LXHBrJhJoNWFjQ8",
+    "name": "Trinidad and Tobago",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/tto.svg"
+  },
+  {
+    "id": "vDbiZ7174fgeQmguuVRmH",
+    "name": "Tunisia",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/tun.svg"
+  },
+  {
+    "id": "UQ_ZFHJryqN3LB42H4C5n",
+    "name": "Turkey",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/tur.svg"
+  },
+  {
+    "id": "_vwvAifVrMCUM_PwPtk3T",
+    "name": "Turkmenistan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "flag": "https://restcountries.eu/data/tkm.svg"
+  },
+  {
+    "id": "RBzj404od_nUA-gRF5QBi",
+    "name": "Turks and Caicos Islands",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "flag": "https://restcountries.eu/data/tca.svg"
+  },
+  {
+    "id": "_pAQwc3W8MmN0BHCoDUKp",
+    "name": "Tuvalu",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/tuv.svg"
+  },
+  {
+    "id": "rBIEti0GDI1sXYt7xf9pA",
+    "name": "Uganda",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/uga.svg"
+  },
+  {
+    "id": "yQbpsBIGfsuf_1KxK2p3K",
+    "name": "Ukraine",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "flag": "https://restcountries.eu/data/ukr.svg"
+  },
+  {
+    "id": "cbEGh6LH9ACJXOwJ1EgPx",
+    "name": "United Arab Emirates",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/are.svg"
+  },
+  {
+    "id": "sMfKkQVJjaPBcUtfd-vbc",
+    "name": "United Kingdom of Great Britain and Northern Ireland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "flag": "https://restcountries.eu/data/gbr.svg"
+  },
+  {
+    "id": "Ocawd1Ixl7T8-6a5S2AdY",
+    "name": "United States of America",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "flag": "https://restcountries.eu/data/usa.svg"
+  },
+  {
+    "id": "6G8zk2u9XqIQYLXzEXB_L",
+    "name": "Uruguay",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/ury.svg"
+  },
+  {
+    "id": "kSkaCjz-qtHRrfjJTFiGP",
+    "name": "Uzbekistan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "flag": "https://restcountries.eu/data/uzb.svg"
+  },
+  {
+    "id": "Zg4c8YPtBUCLpMzXPqoWP",
+    "name": "Vanuatu",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "flag": "https://restcountries.eu/data/vut.svg"
+  },
+  {
+    "id": "ir_Q-IIak4uwQxVZnG98S",
+    "name": "Venezuela (Bolivarian Republic of)",
+    "region": "Americas",
+    "subregion": "South America",
+    "flag": "https://restcountries.eu/data/ven.svg"
+  },
+  {
+    "id": "T3H-nm8dXJcvGoKjiC0mK",
+    "name": "Viet Nam",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "flag": "https://restcountries.eu/data/vnm.svg"
+  },
+  {
+    "id": "s2KynTdSlUFRRFlYdmk7Y",
+    "name": "Wallis and Futuna",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "flag": "https://restcountries.eu/data/wlf.svg"
+  },
+  {
+    "id": "kcToKD3doLj2gtmilbSEg",
+    "name": "Western Sahara",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "flag": "https://restcountries.eu/data/esh.svg"
+  },
+  {
+    "id": "SkqORjOFt2u7EOTgYPleJ",
+    "name": "Yemen",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "flag": "https://restcountries.eu/data/yem.svg"
+  },
+  {
+    "id": "4IxNzYewctikAe0lT5gdB",
+    "name": "Zambia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/zmb.svg"
+  },
+  {
+    "id": "3B_PpT6InlsQ878GGmbCx",
+    "name": "Zimbabwe",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "flag": "https://restcountries.eu/data/zwe.svg"
+  }
+]
