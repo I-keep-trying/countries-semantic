@@ -1,77 +1,33 @@
-import React from 'react'
-import { Card, Header, Image } from 'semantic-ui-react'
+import React, { useState } from 'react'
+import {
+  Card,
+  Header,
+  Image,
+  Item,
+  Grid,
+  Button,
+  Icon,
+  Menu,
+} from 'semantic-ui-react'
 import moment from 'moment'
 import Images from '../images/weather-animated/index'
-//import '../owm-right.css'
+import '../owm-right.css'
 
-const WeatherIcon = ({ src, alt }) => <Image src={src} alt={alt} />
+function WeatherWidget({
+  weather,
+  unit,
+  setUnit,
+  setIsWeatherLoading,
+  isMobile,
+}) {
+  const [activeItem, setActiveItem] = useState(unit)
 
-function Details({ title }) {
-  return (
-    <></>
-    /*  <Stack spacing={0}>
-      <Box borderBottom="1px" borderBottomColor="cyan.400" pl={1} mr={2}>
-        <Heading fontSize="l">{title}</Heading>
-      </Box>
-    </Stack> */
-  )
-}
-
-function DetailsList({ weather, feels, wind, hum, press, unit }) {
-  return (
-    <>
-      {/*     <Stack spacing={0}>
-      <Box p={1}>
-        <HStack>
-          <Text w="50%" fontSize="sm" mt={0}>
-            {feels}
-          </Text>
-          <Text as="strong" fontSize="sm" mt={0}>
-            {Math.round(weather.main.feels_like)} <Text as="sup">°</Text> {unit === 'metric' ? 'C' : 'F'}
-          </Text>
-
-         
-        </HStack>
-
-        <HStack>
-          <Text w="50%" fontSize="sm" mt={0}>
-            {wind}
-          </Text>
-          <Text as="strong" fontSize="sm" mt={0}>
-            {weather.wind.speed} mph
-          </Text>
-        </HStack>
-
-        <HStack>
-          <Text w="50%" fontSize="sm" mt={0}>
-            {hum}
-          </Text>
-          <Text as="strong" fontSize="sm" mt={0}>
-            {weather.main.humidity}%
-          </Text>
-        </HStack>
-
-        <HStack>
-          <Text w="50%" fontSize="sm" mt={0}>
-            {press}
-          </Text>
-          <Text as="strong" fontSize="sm" mt={0}>
-            {weather.main.pressure} hPa
-          </Text>
-        </HStack>
-      </Box>
-    </Stack> */}
-    </>
-  )
-}
-
-function WeatherWidget({ weather, unit, setUnit, setIsWeatherLoading }) {
   const code = weather.weather[0].icon
   const icon = Images[code].path
   const alt = Images[code].alt
   const date = moment.unix(weather.dt).format('YYYY-MM-DD, h:mm a')
 
-  const setToggle = (e) => {
+  /*   const setToggle = (e) => {
     e.preventDefault()
     if (unit === 'metric') {
       setIsWeatherLoading(true)
@@ -82,74 +38,110 @@ function WeatherWidget({ weather, unit, setUnit, setIsWeatherLoading }) {
       setUnit('metric')
       return false
     }
+  } */
+
+  const handleItemClick = (e, { name }) => {
+    setUnit(name)
+    setActiveItem(name)
   }
+
+  // const bgStyle = isMobile ? { background: 'linear-gradient(to bottom, #feb020, #ffd05c)', padding: 0 } : {background: 'blue'}
 
   return (
     <>
-      {/* 
-      <Box id="weather Box" shadow="md" w="100%">
-        <VStack
-          borderTopLeftRadius="20px"
-          borderTopRightRadius="20px"
-          className="widget-right--brown"
-          spacing={0}
-          align="stretch"
+      <Grid style={{ margin: 0 }}>
+        {/* toggle, description, icon */}
+        <Grid.Row
+          style={{
+            background: 'linear-gradient(to bottom, #feb020, #ffd05c)',
+            padding: 0,
+          }}
         >
-          <HStack spacing={0}>
-            <Container>
-              <HStack>
-                <Header as='h1'>
-                  C
-                </Header>
-                <Switch
-                  colorScheme="whiteAlpha"
-                  size="lg"
-                  value={unit}
-                  isChecked={unit === 'imperial'}
-                  onChange={setToggle}
-                />
-                <Header as='h1'>
-                  F
-                </Header>
-              </HStack>
-
-              <Header >{weather.weather[0].description}</Header>
-            </Container>
-            <WeatherIcon src={icon} alt={alt} />
-          </HStack>
-        </VStack>
-
-        <HStack display={{ sm: 'flex' }} spacing={0}>
-          <Center w="40%">
-            <Header>
+          <Grid.Column verticalAlign="middle" width={12}>
+            <Header>{weather.weather[0].description}</Header>
+          </Grid.Column>
+          <Grid.Column style={{ padding: 0 }} width={4}>
+            <Image src={icon} alt={alt} />
+          </Grid.Column>
+        </Grid.Row>
+        {/* temp, details */}
+        <Grid.Row columns={2}>
+          {/* temp */}
+          <Grid.Column
+            style={{ paddingLeft: 0, paddingRight: 0 }}
+            textAlign="center"
+            verticalAlign="middle"
+            width={6}
+          >
+            <Header style={{ fontSize: '3rem' }}>
               {Math.round(weather.main.temp)}
-              <Header>°</Header>
-              {unit === 'metric' ? 'C' : 'F'}
+              {`° `}
+             {unit === 'metric' ? 'C' : 'F'}
+            {/*   {activeItem === 'metric' ? 'C' : 'F'} */}
             </Header>
-          </Center>
+          </Grid.Column>
+          {/* details */}
+          <Grid.Column width={10}>
+            <Grid.Row>
+              <Header
+                style={{
+                  borderBottomStyle: 'solid',
+                  borderBottomColor: 'teal',
+                  borderBottomWidth: 'thin',
+                }}
+                as="h4"
+              >
+                Details
+              </Header>
+            </Grid.Row>
 
-          <Stack w="60%" p={5}>
-            <Details title="Details" />
-            <DetailsList
-              feels="Feels like"
-              wind="Wind"
-              hum="Humidity"
-              press="Pressure"
-              weather={weather}
-              unit={unit}
-            />
-          </Stack>
-        </HStack>
-        <HStack
-          borderBottomLeftRadius="20px"
-          borderBottomRightRadius="20px"
-          className="widget-right--brown"
+            <Grid>
+              <Grid.Column width={8}>
+                <Grid.Row>Feels like</Grid.Row>
+                <Grid.Row>Wind</Grid.Row>
+                <Grid.Row>Humidity</Grid.Row>
+                <Grid.Row>Pressure</Grid.Row>{' '}
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Grid.Row></Grid.Row>
+                <Grid.Row>
+                  {' '}
+                  {Math.round(weather.main.feels_like)}
+                  {`° `}
+                  {/* {unit === 'metric' ? 'C' : 'F'} */}
+                  {activeItem === 'metric' ? 'C' : 'F'}
+                </Grid.Row>
+                <Grid.Row>
+                  {weather.wind.speed}
+                  {/* {unit === 'metric' ? 'kph' : 'mph'} */}
+                  {activeItem === 'metric' ? 'kph' : 'mph'}
+                </Grid.Row>
+                <Grid.Row>{weather.main.humidity}%</Grid.Row>
+                <Grid.Row>{weather.main.pressure} hPa</Grid.Row>
+              </Grid.Column>
+            </Grid>
+          </Grid.Column>{' '}
+        </Grid.Row>
+        {/* retrieved date */}
+        <Grid.Row
+          columns={1}
+          style={{
+            background: 'linear-gradient(to bottom, #feb020, #ffd05c)',
+            paddingTop: 4,
+            paddingBottom: 2,
+          }}
         >
-          <Container textAlign="right" spacing={0}>
-            <Header as='h6'>Reported: {date} </Header>
-          </Container>
-        </HStack>
-      </Box> */}
+          <Grid.Column
+            textAlign="right"
+            style={{ paddingTop: 0, paddingBottom: 0, paddingRight: 5 }}
+          >
+            <Header style={{ fontSize: '.75rem', padding: 0 }} as="h6">
+              Reported: {date}{' '}
+            </Header>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+      <div></div>
     </>
   )
 }

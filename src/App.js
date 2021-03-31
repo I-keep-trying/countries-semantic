@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container } from 'semantic-ui-react'
 import Footer from './components/Footer'
 import HeaderNav from './components/Header'
@@ -12,6 +12,12 @@ function App() {
   const [region, setRegion] = useState('All')
   const [subregion, setSubRegion] = useState('')
   const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    if (input === '') {
+      setIsLoading(true)
+    }
+  }, [input])
 
   /*  
 // Keeping temporarily - generates new static list
@@ -34,7 +40,7 @@ function App() {
     region === 'All'
       ? filteredCountries
       : filteredCountries.filter((c) => {
-          if (region.toLowerCase() === 'other') {
+          if (region === 'Other') {
             return c.region === ''
           }
           return c.region.toLowerCase() === region.toLowerCase()
@@ -51,15 +57,17 @@ function App() {
   }
 
   return (
-    <div>
+    <div style={{ paddingBottom: '100px' }}>
       <HeaderNav
         input={input}
         setInput={setInput}
         setRegion={setRegion}
         setSubRegion={setSubRegion}
         handleChange={handleChange}
+        countries={filterBySubregion}
       />
       <Countries
+        input={input}
         region={region}
         regions={regions}
         countries={filterBySubregion}
@@ -69,9 +77,10 @@ function App() {
         subregion={subregion}
         isLoading={isLoading}
         setIsLoading={setIsLoading}
+        handleChange={handleChange}
       />
 
-      <Container fluid className="Footer-container">
+      <Container fluid>
         <Footer />
       </Container>
     </div>

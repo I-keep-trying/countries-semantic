@@ -1,5 +1,5 @@
 [
-  { "id": "FZUe47mEY9PCOzYmMxzYY", "region": "All" },
+  { "id": "FZUe47mEY9PCOzYmMxzYY", "region": "All", "subregions": [] },
   {
     "id": "MywTm4_IEp2XZtAfPKRGg",
     "region": "Asia",
@@ -52,6 +52,6 @@
       "Northern America"
     ]
   },
-  { "id": "Tnrp40V1CE3AB_yBKxmxK", "region": "Polar" },
-  { "id": "Tnrp40V1CE3AB_yBKxmx1", "region": "Other" }
+  { "id": "Tnrp40V1CE3AB_yBKxmxK", "region": "Polar", "subregions": [] },
+  { "id": "Tnrp40V1CE3AB_yBKxmx1", "region": "Other", "subregions": [] }
 ]
