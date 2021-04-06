@@ -1,0 +1,211 @@
+ <svg
+              className="axis"
+              width="420"
+              height="79"
+              fill="#FEB020"
+              style="stroke: rgb(255, 255, 255)"
+            >
+              <g>
+                <path
+                  d="M15,23.615384615384613L72.14285714285714,30.42307692307692L129.28571428571428,30.42307692307692L186.42857142857142,21.346153846153847L243.57142857142856,41.76923076923077L300.7142857142857,44.03846153846154L357.85714285714283,39.5L415,34.96153846153847L415,53.11538461538461L357.85714285714283,53.11538461538461L300.7142857142857,57.65384615384615L243.57142857142856,53.11538461538461L186.42857142857142,48.57692307692308L129.28571428571428,50.84615384615385L72.14285714285714,50.84615384615385L15,44.03846153846154L15,23.615384615384613"
+                  style="
+                stroke-width: 1px;
+                stroke: rgb(254, 176, 32);
+                fill: rgb(254, 176, 32);
+                opacity: 1;
+              "
+                ></path>
+              </g>
+              <text
+                x="15"
+                y="19.115384615384613"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                15°
+              </text>
+              <text
+                x="15"
+                y="61.03846153846154"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                6°
+              </text>
+              <text
+                x="72.14285714285714"
+                y="25.92307692307692"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                12°
+              </text>
+              <text
+                x="72.14285714285714"
+                y="67.84615384615384"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                3°
+              </text>
+              <text
+                x="129.28571428571428"
+                y="25.92307692307692"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                12°
+              </text>
+              <text
+                x="129.28571428571428"
+                y="67.84615384615384"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                3°
+              </text>
+              <text
+                x="186.42857142857142"
+                y="16.846153846153847"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                16°
+              </text>
+              <text
+                x="186.42857142857142"
+                y="65.57692307692308"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                4°
+              </text>
+              <text
+                x="243.57142857142856"
+                y="37.26923076923077"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                7°
+              </text>
+              <text
+                x="243.57142857142856"
+                y="70.11538461538461"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                2°
+              </text>
+              <text
+                x="300.7142857142857"
+                y="39.53846153846154"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                6°
+              </text>
+              <text
+                x="300.7142857142857"
+                y="74.65384615384616"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                0°
+              </text>
+              <text
+                x="357.85714285714283"
+                y="35"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                8°
+              </text>
+              <text
+                x="357.85714285714283"
+                y="70.11538461538461"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                2°
+              </text>
+              <text
+                x="415"
+                y="30.461538461538467"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                10°
+              </text>
+              <text
+                x="415"
+                y="70.11538461538461"
+                textAnchor="middle"
+                style="
+              font-size: 12px;
+              stroke: rgb(51, 51, 51);
+              fill: rgb(51, 51, 51);
+            "
+              >
+                2°
+              </text>
+            </svg>

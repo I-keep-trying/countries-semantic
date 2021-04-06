@@ -1,0 +1,30 @@
+{
+  "coord": { "lon": 20, "lat": 60 },
+  "weather": [
+    { "id": 800, "main": "Clear", "description": "clear sky", "icon": "01n" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 2,
+    "feels_like": -0.72,
+    "temp_min": 2,
+    "temp_max": 2,
+    "pressure": 1013,
+    "humidity": 80
+  },
+  "visibility": 10000,
+  "wind": { "speed": 2.57, "deg": 330 },
+  "clouds": { "all": 0 },
+  "dt": 1617395495,
+  "sys": {
+    "type": 1,
+    "id": 1347,
+    "country": "AX",
+    "sunrise": 1617336112,
+    "sunset": 1617384294
+  },
+  "timezone": 10800,
+  "id": 648382,
+  "name": "Lemland",
+  "cod": 200
+}

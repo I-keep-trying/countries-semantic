@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "title": "Georgetown, Demerara-Mahaica, Guyana",
+      "id": "here:cm:namedplace:25511980",
+      "resultType": "locality",
+      "localityType": "city",
+      "address": {
+        "label": "Georgetown, Demerara-Mahaica, Guyana",
+        "countryCode": "GUY",
+        "countryName": "Guyana",
+        "state": "Demerara-Mahaica",
+        "county": "IV-1 Moblissa/la Reconnai",
+        "city": "Georgetown"
+      },
+      "position": { "lat": 6.80859, "lng": -58.16125 },
+      "mapView": {
+        "west": -58.18198,
+        "south": 6.77448,
+        "east": -58.10529,
+        "north": 6.82777
+      },
+      "scoring": {
+        "queryScore": 1.0,
+        "fieldScore": { "country": 1.0, "city": 1.0 }
+      }
+    }
+  ]
+}

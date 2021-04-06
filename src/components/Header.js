@@ -1,45 +1,53 @@
 import React, { useRef, useEffect } from 'react'
-import { Menu, Container, Icon, Input } from 'semantic-ui-react'
+import { isMobile } from 'react-device-detect'
+import { Menu, Container, Icon } from 'semantic-ui-react'
 
-const Filter = ({ input, onChange, countries }) => {
+const HeaderNav = ({ input, handleChange, countries }) => {
   const inputRef = useRef()
 
   useEffect(() => {
-    if (countries.length === 1) {
-      inputRef.current.blur()
+    if (countries !== undefined) {
+      if (countries.length === 1) {
+        inputRef.current.blur()
+      }
     }
   }, [countries])
 
-  /*   if (countries.length === 1) {
-    console.log('inputRef', inputRef.current.blur)
-    inputRef.current.blur()
-  } */
-
-  return (
-    <input
-      type="text"
-      ref={inputRef}
-      value={input}
-      onChange={onChange}
-      placeholder="Start typing to search"
-    />
-  )
-}
-
-const HeaderNav = ({ input, handleChange, countries }) => {
-  return (
+  return isMobile ? (
     <Menu fixed="top" inverted>
-      <Container fluid>
-        <Menu.Item header>
-          <Icon name="globe" color="grey" size="big" />
-          <p> World Countries</p>
+      <Container>
+        <Menu.Item
+          style={{ paddingLeft: 2, paddingRight: 0, marginRight: 15 }}
+          header
+        >
+          <Icon name="globe" color="teal" size="large" />
+          <Menu.Menu>
+            <Menu.Item style={{ padding: 0 }}>World</Menu.Item>
+            <Menu.Item
+              style={{
+                paddingLeft: 0,
+                paddingTop: 0,
+                paddingBottom: 0,
+                paddingRight: 7,
+              }}
+            >
+              Countries
+            </Menu.Item>
+          </Menu.Menu>
         </Menu.Item>
-        <Menu.Item>
-          {' '}
-          <Filter input={input} onChange={handleChange} countries={countries} />
+
+        <Menu.Item fitted>
+          <input
+            type="text"
+            ref={inputRef}
+            value={input}
+            onChange={handleChange}
+            placeholder="Start typing to search"
+          />
         </Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item
+            style={{ paddingLeft: 0, paddingRight: 0 }}
             as="a"
             href="https://github.com/I-keep-trying/countries-semantic"
           >
@@ -48,6 +56,34 @@ const HeaderNav = ({ input, handleChange, countries }) => {
         </Menu.Menu>
       </Container>
     </Menu>
+  ) : (
+    <>
+      <Menu fixed="top" inverted>
+        <Container fluid>
+          <Menu.Item header>
+            <Icon name="globe" color="teal" size="big" />
+            <p> World Countries</p>
+          </Menu.Item>
+          <Menu.Item>
+            <input
+              type="text"
+              ref={inputRef}
+              value={input}
+              onChange={handleChange}
+              placeholder="Start typing to search"
+            />
+          </Menu.Item>
+          <Menu.Menu position="right">
+            <Menu.Item
+              as="a"
+              href="https://github.com/I-keep-trying/countries-semantic"
+            >
+              <Icon name="github" size="big" />
+            </Menu.Item>
+          </Menu.Menu>
+        </Container>
+      </Menu>
+    </>
   )
 }
 

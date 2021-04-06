@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from 'react'
+import { isMobile } from 'react-device-detect'
 import {
-  Tab,
   Divider,
   Menu,
   Container,
   Icon,
   Image,
   Button,
-  Segment,
-  Table,
   Card,
   Popup,
   Grid,
-  Flag,
   Header,
-  Statistic,
+  Item,
+  Flag,
 } from 'semantic-ui-react'
 import axios from 'axios'
 import Weather from '../components/Weather'
+import Map from '../Map'
 
 const Country = ({
   country,
@@ -26,16 +25,31 @@ const Country = ({
   setRegion,
   setSubRegion,
   setIsLoading,
-  isMobile,
+  setActiveItem,
 }) => {
   const [weather, setWeather] = useState({})
   const [unit, setUnit] = useState('metric')
   const [isWeatherLoading, setIsWeatherLoading] = useState(true)
-  const [activeItem, setActiveItem] = useState('Details')
-  const [activeUnit, setActiveUnit] = useState(unit)
+  const [activeTab, setActiveTab] = useState('Details')
+  const [activeTab2, setActiveTab2] = useState('Flag')
+  const [location, setLocation] = useState({})
 
   useEffect(() => {
-    if (!isLoading) {
+    axios
+      .get(
+        `https://geocode.search.hereapi.com/v1/geocode?q=${country.capital},${country.name}&apiKey=${process.env.REACT_APP_HERE_KEY}`
+      )
+      .then((res) => {
+        setLocation(res.data.items[0].position)
+      })
+  }, [country])
+  const lat = Math.round(country.latlng[0])
+  const lng = Math.round(country.latlng[1])
+
+  useEffect(() => {
+    if (Object.entries(location).length > 0) {
+      const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=minutely,hourly&appid=${process.env.REACT_APP_OPENWEATHER_KEY}&units=${unit}`
+
       if (
         unit === 'metric' &&
         window.localStorage.getItem(`${country.name} weather in metric`) !==
@@ -69,12 +83,6 @@ const Country = ({
           window.localStorage.removeItem(`${country.name} weather in imperial`)
         }, 10000)
       } else {
-        const lat = Math.round(country.latlng[0])
-        const lon = Math.round(country.latlng[1])
-        !isWeatherLoading ? setIsWeatherLoading(true) : isWeatherLoading
-
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPENWEATHER_KEY}&units=${unit}`
-
         axios.get(url).then((response) => {
           setWeather(response.data)
           setIsWeatherLoading(false)
@@ -86,271 +94,624 @@ const Country = ({
         })
       }
     }
-  }, [country, unit, isLoading])
+  }, [location, unit])
 
   const reset = () => {
     setInput('')
     setRegion('All')
     setSubRegion('')
+    setActiveItem('All')
   }
 
-  const handleUnitClick = (e, { name }) => {
-    setUnit(name)
-    setActiveUnit(name)
+  const handleUnitButtonClick = () => {
+    if (unit === 'metric') {
+      setIsWeatherLoading(true)
+      setUnit('imperial')
+      return true
+    }
+    setIsWeatherLoading(true)
+    setUnit('metric')
+    return false
   }
 
   const handleItemClick = (e, { name }) => {
-    setActiveItem(name)
+    setActiveTab(name)
+  }
+
+  const handleItemClick2 = (e, { name }) => {
+    setActiveTab2(name)
   }
 
   return !isLoading ? (
-    <Container>
-      <Button basic onClick={reset}>
-        Back
-      </Button>
-      <Grid style={{ margin: 0 }}>
-        <Grid.Row style={{ marginBottom: 0, marginTop: 10 }}>
-          <Grid.Column
-            style={{ paddingRight: 0 }}
-            verticalAlign="middle"
-            width={2}
-          >
-            <Card style={{ marginLeft: 1 }}>
-              <Image src={country.flag} alt="country flag" />
-            </Card>
-          </Grid.Column>
-          <Grid.Column verticalAlign="middle" width={14}>
-            <Header as="h1" style={{ paddingLeft: 0, marginTop: 0 }}>
-              {country.name}{' '}
-            </Header>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <Header
-        as="h3"
-        style={{ paddingLeft: 10, marginBottom: 5, marginTop: 0 }}
-      >
-        Region: {country.region}{' '}
-      </Header>
-      {country.subregion !== '' ? (
-        <Header
-          as="h3"
-          style={{ paddingLeft: 10, marginBottom: 10, marginTop: 0 }}
-        >
-          Subregion: {country.subregion}{' '}
-        </Header>
-      ) : (
-        <></>
-      )}{' '}
-      <Menu
-        inverted
-        size="mini"
-        widths={2}
-        style={{ margin: 0, padding: 0, borderWidth: 0, borderRadius: 0 }}
-        borderless
-      >
-        <Menu.Item
-          style={{ fontSize: '1rem', fontWeight: 600, padding: 0 }}
-          name="metric"
-          active={activeUnit === 'metric'}
-          onClick={handleUnitClick}
-        />
-        <Menu.Item
-          style={{ fontSize: '1rem', fontWeight: 600, padding: 0 }}
-          name="imperial"
-          active={activeUnit === 'imperial'}
-          onClick={handleUnitClick}
-        />
-      </Menu>
-      <Menu
-        style={{ paddingTop: 0, marginBottom: 0, marginTop: 0, borderWidth: 0 }}
-        widths={2}
-        tabular
-      >
-        <Menu.Item
-          name="Details"
-          active={activeItem === 'Details'}
-          onClick={handleItemClick}
-        />
-        <Menu.Item
-          name="Weather"
-          active={activeItem === 'Weather'}
-          onClick={handleItemClick}
-        />
-      </Menu>
-      <Card fluid style={{ marginTop: 0 }}>
-        {activeItem === 'Details' && !isLoading ? (
+    <>
+      <Container>
+        <Button basic onClick={reset}>
+          Back
+        </Button>
+        {isMobile ? (
           <>
-            <Card.Group
-              centered
-              stackable
-              style={{ margin: 0 }}
-              itemsPerRow={4}
-            >
-              <Card style={{ margin: 0 }} description={country.nativeName}>
-                <Card.Content>
-                  <Card.Header>
-                    <Popup
-                      style={{
-                        borderRadius: 0,
-                        padding: '2em',
-                      }}
-                      hoverable
-                      inverted
-                      aria-label="An endonym (also known as autonym) is a common, internal name for a geographical place, group of people, or a language/dialect, that is used only inside that particular place, group, or linguistic community."
-                      trigger={
-                        <div>
-                          Endonym <Header as="h6"> (Native Name) </Header>
-                        </div>
-                      }
-                    >
-                      <Popup.Content>
-                        <>
-                          {`An endonym (also known as autonym) is a common, internal name for a geographical place, group of people, or a language/dialect, that is used only inside that particular place, group, or linguistic community.`}
-                          <a href="https://en.wikipedia.org/wiki/Endonym_and_exonym">
-                            <Icon name="external" />
-                          </a>
-                        </>
-                      </Popup.Content>
-                    </Popup>
-                  </Card.Header>
-                  <Card.Description>{country.nativeName}</Card.Description>
-                </Card.Content>
-              </Card>
-              <Card
-                style={{ margin: 0 }}
-                header="Capital"
-                description={country.capital}
+            <Menu tabular>
+              <Menu.Item
+                active
+                name="Flag"
+                active={activeTab2 === 'Flag'}
+                onClick={handleItemClick2}
               />
-              {/* provided in km */}
-              {country.area !== null ? (
-                <Card
-                  style={{ margin: 0 }}
-                  header="Size"
-                  description={
-                    unit === 'metric'
-                      ? ` ${country.area.toLocaleString()} km²`
-                      : ` ${Math.round(country.area * 1.609).toLocaleString()} mi²`
-                  }
-                />
-              ) : (
-                <Card
-                  style={{ margin: 0 }}
-                  header="Size"
-                  description={'Not provided'}
-                />
-              )}
-              <Card
-                style={{ margin: 0 }}
-                header="Population"
-                description={country.population.toLocaleString()}
+              <Menu.Item
+                name="Map"
+                active={activeTab2 === 'Map'}
+                onClick={handleItemClick2}
               />
-            </Card.Group>
-            <Divider />
-            <Card.Group
-              centered
-              stackable
-              style={{ margin: 0 }}
-              itemsPerRow={2}
-            >
-              <Card style={{ margin: 0 }}>
-                <Card.Content>
-                  <Card.Header>Languages</Card.Header>
-                  <Card.Description>
-                    <Grid style={{ margin: 0 }}>
-                      {country.languages.map((lang) => (
-                        <Grid.Row style={{ padding: 0 }} key={lang.name}>
-                          {lang.name}
-                        </Grid.Row>
-                      ))}{' '}
-                    </Grid>
-                  </Card.Description>
-                </Card.Content>
-              </Card>
+            </Menu>
 
-              <Card style={{ margin: 0 }}>
-                <Card.Content>
-                  <Card.Header>Time Zones</Card.Header>
-                  <Card.Description>
-                    <Grid style={{ margin: 0 }}>
-                      {country.timezones.map((tz) => (
-                        <Grid.Row style={{ padding: 0 }} key={tz}>
-                          {tz}
-                        </Grid.Row>
-                      ))}
-                    </Grid>
-                  </Card.Description>
-                </Card.Content>
+            <Grid style={{ marginBottom: 25, marginTop: 0, marginLeft: 0, marginRight:0 }}>
+              {activeTab2 === 'Flag' ? (
+                <Grid.Column>
+                  <Grid.Row style={{ marginBottom: 0, marginTop: 10 }}>
+                    <Grid.Column
+                      style={{ paddingRight: 0 }}
+                      verticalAlign="middle"
+                      width={2}
+                    >
+                      <Card style={{ marginLeft: 1 }}>
+                        <Image src={country.flag} alt="country flag" />
+                      </Card>
+                    </Grid.Column>
+                    <Grid.Column verticalAlign="middle" width={14}>
+                      <Header as="h1" style={{ paddingLeft: 0, marginTop: 10 }}>
+                        {country.name}
+                      </Header>
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row>
+                    {' '}
+                    <Header as="h3" style={{ marginBottom: 5, marginTop: 0 }}>
+                      Region: {country.region}
+                    </Header>
+                  </Grid.Row>
+                  <Grid.Row>
+                    <Header as="h3" style={{ marginBottom: 5, marginTop: 0 }}>
+                      Subregion:
+                      {country.subregion !== '' ? (
+                        <> {country.subregion}</>
+                      ) : (
+                        <>N/A</>
+                      )}
+                    </Header>
+                  </Grid.Row>
+                </Grid.Column>
+              ) : (
+                <Grid.Column style={{ padding: 0, marginLeft: 0 }}>
+                  <Container style={{ width: '40vw', height: '45vh' }}>
+                    <Map lat={lat} lng={lng} />
+                  </Container>
+                </Grid.Column>
+              )}
+            </Grid>
+          </>
+        ) : (
+          // desktop
+          <Grid style={{ margin: 0 }} columns={2}>
+            <Grid.Column>
+              {' '}
+              <Grid.Row style={{ marginBottom: 0, marginTop: 10 }}>
+                <Grid.Column
+                  style={{ paddingRight: 0 }}
+                  verticalAlign="middle"
+                  width={2}
+                >
+                  <Card style={{ marginLeft: 1 }}>
+                    <Image src={country.flag} alt="country flag" />
+                  </Card>
+                </Grid.Column>
+                <Grid.Column verticalAlign="middle" width={14}>
+                  <Header as="h1" style={{ paddingLeft: 0, marginTop: 10 }}>
+                    {country.name}
+                  </Header>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                {' '}
+                <Header as="h3" style={{ marginBottom: 5, marginTop: 0 }}>
+                  Region: {country.region}
+                </Header>
+              </Grid.Row>
+              <Grid.Row>
+                <Header as="h3" style={{ marginBottom: 5, marginTop: 0 }}>
+                  Subregion:
+                  {country.subregion !== '' ? (
+                    <> {country.subregion}</>
+                  ) : (
+                    <>N/A</>
+                  )}
+                </Header>
+              </Grid.Row>
+            </Grid.Column>
+            <Grid.Column style={{ padding: 0, marginLeft: -10 }}>
+              <Map lat={lat} lng={lng} />
+            </Grid.Column>
+          </Grid>
+        )}
+
+        <Button.Group>
+          {unit === 'metric' ? (
+            <>
+              <Button color="black" onClick={handleUnitButtonClick}>
+                Metric
+              </Button>
+              <Button.Or />
+              <Button basic color="black" onClick={handleUnitButtonClick}>
+                American <Flag name="us" />
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button basic color="black" onClick={handleUnitButtonClick}>
+                Metric
+              </Button>
+              <Button.Or />
+              <Button color="black" onClick={handleUnitButtonClick}>
+                Imperial
+              </Button>
+            </>
+          )}
+        </Button.Group>
+        <Menu
+          style={{
+            paddingTop: 10,
+            marginBottom: 0,
+            marginTop: 0,
+            borderWidth: 0,
+          }}
+          tabular
+        >
+          <Menu.Item
+            name="Details"
+            active={activeTab === 'Details'}
+            onClick={handleItemClick}
+          />
+          <Menu.Item
+            name="Weather"
+            active={activeTab === 'Weather'}
+            onClick={handleItemClick}
+          />
+        </Menu>
+        {activeTab === 'Details' && !isLoading ? (
+          <>
+            {isMobile ? (
+              <Card fluid style={{ margin: 0 }}>
+                <Grid style={{ margin: 0 }} columns={2}>
+                  <Grid.Row style={{ paddingBottom: 0 }}>
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ marginTop: 0 }}>
+                          <Item.Content>
+                            <Item.Header>
+                              Endonym
+                              <Popup
+                                style={{
+                                  borderRadius: 0,
+                                  padding: '2em',
+                                }}
+                                hoverable
+                                inverted
+                                aria-label="An endonym (also known as autonym) is a common, internal name for a geographical place, group of people, or a language/dialect, that is used only inside that particular place, group, or linguistic community."
+                                trigger={
+                                  <Icon size="small" name="info circle" />
+                                }
+                              >
+                                <Popup.Content>
+                                  <>
+                                    An endonym (also known as autonym) is a
+                                    common, internal name for a geographical
+                                    place, group of people, or a
+                                    language/dialect, that is used only inside
+                                    that particular place, group, or linguistic
+                                    community.
+                                    <a href="https://en.wikipedia.org/wiki/Endonym_and_exonym">
+                                      <Icon name="external" />
+                                    </a>
+                                  </>
+                                </Popup.Content>
+                              </Popup>
+                            </Item.Header>
+                            <Item.Description>
+                              {country.nativeName}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ marginTop: 0 }}>
+                          <Item.Content>
+                            <Item.Header as="a">Capital</Item.Header>
+                            <Item.Description>
+                              {country.capital}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+
+                <Grid style={{ margin: 0 }} columns={2}>
+                  <Grid.Row style={{ padding: 0 }}>
+                    {country.area !== null ? (
+                      <Grid.Column>
+                        <Item.Group relaxed>
+                          <Item style={{ margin: 0 }}>
+                            <Item.Content>
+                              <Item.Header>Size</Item.Header>
+                              <Item.Description>
+                                {unit === 'metric'
+                                  ? ` ${country.area.toLocaleString()} km²`
+                                  : ` ${Math.round(
+                                      country.area * 1.609
+                                    ).toLocaleString()} mi²`}
+                              </Item.Description>
+                            </Item.Content>
+                          </Item>
+                        </Item.Group>
+                      </Grid.Column>
+                    ) : (
+                      <Grid.Column>
+                        <Item.Group relaxed>
+                          <Item style={{ marginTop: 0 }}>
+                            <Item.Content>
+                              <Item.Header>Size</Item.Header>
+                              <Item.Description>Not provided.</Item.Description>
+                            </Item.Content>
+                          </Item>
+                        </Item.Group>
+                      </Grid.Column>
+                    )}
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ marginTop: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Population</Item.Header>
+                            <Item.Description>
+                              {country.population.toLocaleString()}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+
+                <Divider style={{ margin: 0 }} />
+                <Grid style={{ margin: 0 }} columns={2}>
+                  <Grid.Row>
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ marginTop: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Languages</Item.Header>
+
+                            <Item.Description>
+                              {country.languages.map((lang) => (
+                                <Grid.Row
+                                  style={{ padding: 0 }}
+                                  key={lang.name}
+                                >
+                                  {lang.name}
+                                </Grid.Row>
+                              ))}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ marginTop: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Time Zones</Item.Header>
+                            <Item.Description>
+                              {country.timezones.map((tz) => (
+                                <Grid.Row style={{ padding: 0 }} key={tz}>
+                                  {tz}
+                                </Grid.Row>
+                              ))}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+                <Divider style={{ margin: 0 }} />
+                <Grid style={{ margin: 0 }} columns={1}>
+                  <Grid.Row>
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ marginTop: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Currencies</Item.Header>
+                            <Item.Description>
+                              <Grid style={{ margin: 0 }}>
+                                <Grid.Row
+                                  style={{ paddingTop: 0, paddingLeft: 0 }}
+                                  columns={3}
+                                >
+                                  <Grid.Column style={{ padding: 0 }}>
+                                    <strong> Symbol</strong>
+                                  </Grid.Column>
+                                  <Grid.Column>
+                                    <strong> Code</strong>
+                                  </Grid.Column>
+                                  <Grid.Column style={{ paddingRight: 0 }}>
+                                    <strong> Name</strong>
+                                  </Grid.Column>
+                                </Grid.Row>
+                                {country.currencies.map((curr) => (
+                                  <Grid.Row
+                                    columns={3}
+                                    style={{ padding: 0 }}
+                                    key={curr.code}
+                                  >
+                                    <Grid.Column>{curr.symbol}</Grid.Column>
+                                    <Grid.Column>{curr.code}</Grid.Column>
+                                    <Grid.Column style={{ paddingRight: 0 }}>
+                                      {curr.name}
+                                    </Grid.Column>
+                                  </Grid.Row>
+                                ))}
+                              </Grid>
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
               </Card>
-            </Card.Group>
-            <Divider />
-            <Card.Group itemsPerRow={1}>
-              <Card style={{ margin: 0 }}>
-                <Card.Content>
-                  <Card.Header>Currencies</Card.Header>
-                  <Card.Description>
-                    <Grid style={{ margin: 0 }}>
-                      <Grid.Row
-                        style={{ paddingTop: 0, paddingLeft: 5 }}
-                        columns={3}
-                      >
-                        <Grid.Column style={{ padding: 0 }}>
-                          <strong> Symbol</strong>{' '}
-                        </Grid.Column>
-                        <Grid.Column>
-                          {' '}
-                          <strong> Code</strong>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingRight: 0 }}>
-                          <strong> Name</strong>
-                        </Grid.Column>
-                      </Grid.Row>
-                      {country.currencies.map((curr) => (
-                        <>
-                          <Grid.Row
-                            columns={3}
-                            style={{ padding: 0 }}
-                            key={curr.code}
-                          >
-                            <Grid.Column>{curr.symbol}</Grid.Column>
-                            <Grid.Column>{curr.code}</Grid.Column>
-                            <Grid.Column style={{ paddingRight: 0 }}>
-                              {curr.name}
-                            </Grid.Column>
-                          </Grid.Row>
-                          <Divider />
-                        </>
-                      ))}
-                    </Grid>
-                  </Card.Description>
-                </Card.Content>
+            ) : (
+              <Card fluid style={{ margin: 0 }}>
+                <Grid style={{ margin: 0 }} columns={4}>
+                  <Grid.Row>
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Popup
+                              style={{
+                                borderRadius: 0,
+                                padding: '2em',
+                              }}
+                              hoverable
+                              inverted
+                              aria-label="An endonym (also known as autonym) is a common, internal name for a geographical place, group of people, or a language/dialect, that is used only inside that particular place, group, or linguistic community."
+                              trigger={<Item.Header>Endonym</Item.Header>}
+                            >
+                              <Popup.Content>
+                                <>
+                                  An endonym (also known as autonym) is a
+                                  common, internal name for a geographical
+                                  place, group of people, or a language/dialect,
+                                  that is used only inside that particular
+                                  place, group, or linguistic community.
+                                  <a href="https://en.wikipedia.org/wiki/Endonym_and_exonym">
+                                    <Icon name="external" />
+                                  </a>
+                                </>
+                              </Popup.Content>
+                            </Popup>
+
+                            <Item.Description>
+                              {country.nativeName}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Item.Header as="a">Capital</Item.Header>
+                            <Item.Description>
+                              {country.capital}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                    {country.area !== null ? (
+                      <Grid.Column>
+                        <Item.Group relaxed>
+                          <Item style={{ margin: 0 }}>
+                            <Item.Content>
+                              <Item.Header>Size</Item.Header>
+                              <Item.Description>
+                                {unit === 'metric'
+                                  ? ` ${country.area.toLocaleString()} km²`
+                                  : ` ${Math.round(
+                                      country.area * 1.609
+                                    ).toLocaleString()} mi²`}
+                              </Item.Description>
+                            </Item.Content>
+                          </Item>
+                        </Item.Group>
+                      </Grid.Column>
+                    ) : (
+                      <Grid.Column>
+                        <Item.Group relaxed>
+                          <Item style={{ margin: 0 }}>
+                            <Item.Content>
+                              <Item.Header>Size</Item.Header>
+                              <Item.Description>Not provided.</Item.Description>
+                            </Item.Content>
+                          </Item>
+                        </Item.Group>
+                      </Grid.Column>
+                    )}
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Population</Item.Header>
+                            <Item.Description>
+                              {country.population.toLocaleString()}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+                <Divider style={{ margin: 0 }} />
+                <Grid style={{ margin: 0 }} columns={2}>
+                  <Grid.Column>
+                    <Item.Group relaxed>
+                      <Item style={{ margin: 0 }}>
+                        <Item.Content>
+                          <Item.Header>Languages</Item.Header>
+                          <Item.Description>
+                            {country.languages.map((lang) => (
+                              <Grid.Row style={{ padding: 0 }} key={lang.name}>
+                                {lang.name}
+                              </Grid.Row>
+                            ))}
+                          </Item.Description>
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Item.Group relaxed>
+                      <Item style={{ margin: 0 }}>
+                        <Item.Content>
+                          <Item.Header>Time Zones</Item.Header>
+                          <Item.Description>
+                            {country.timezones.map((tz) => (
+                              <Grid.Row style={{ padding: 0 }} key={tz}>
+                                {tz}
+                              </Grid.Row>
+                            ))}
+                          </Item.Description>
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+                  </Grid.Column>
+                  {/*  */}
+                </Grid>
+                <Divider style={{ margin: 0 }} />
+                <Grid style={{ margin: 0 }} columns={3}>
+                  <Grid.Row style={{ paddingLeft: 14, paddingBottom: 0 }}>
+                    <Header>Currencies</Header>
+                  </Grid.Row>
+
+                  <Grid.Column>
+                    <Item.Group>
+                      <Item>
+                        <Item.Content>
+                          <Item.Header> Symbol</Item.Header>
+                          <Item.Description>
+                            {country.currencies.map((curr) => (
+                              <Grid.Row
+                                columns={3}
+                                style={{ padding: 0 }}
+                                key={curr.symbol}
+                              >
+                                {curr.symbol}
+                              </Grid.Row>
+                            ))}
+                          </Item.Description>
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Item.Group>
+                      <Item>
+                        <Item.Content>
+                          <Item.Header> Code</Item.Header>
+                          <Item.Description>
+                            {country.currencies.map((curr) => (
+                              <Grid.Row
+                                columns={3}
+                                style={{ padding: 0 }}
+                                key={curr.code}
+                              >
+                                {curr.code}
+                              </Grid.Row>
+                            ))}
+                          </Item.Description>
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Item.Group>
+                      <Item>
+                        <Item.Content>
+                          <Item.Header>Name</Item.Header>
+                          <Item.Description>
+                            {country.currencies.map((curr) => (
+                              <Grid.Row
+                                columns={3}
+                                style={{ padding: 0 }}
+                                key={curr.name}
+                              >
+                                {curr.name}
+                              </Grid.Row>
+                            ))}
+                          </Item.Description>
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+                  </Grid.Column>
+                </Grid>
               </Card>
-            </Card.Group>
+            )}
           </>
         ) : (
           <>
-            <Segment style={{ padding: 0, margin: 0, borderWidth: 0 }}>
-              {!isWeatherLoading && !isLoading ? (
-                <>
-                  <Weather
-                    weather={weather}
-                    unit={unit}
-                    setUnit={setUnit}
-                    setIsWeatherLoading={setIsWeatherLoading}
-                    isMobile={isMobile}
-                  />
-                </>
-              ) : (
-                <Icon loading name="spinner" />
-              )}
-            </Segment>
+            {isMobile ? (
+              <>
+                {!isWeatherLoading && !isLoading ? (
+                  <Card fluid style={{ margin: 0 }}>
+                    <Weather
+                      weather={weather}
+                      unit={unit}
+                      activeTab={activeTab}
+                      country={country}
+                    />
+                  </Card>
+                ) : (
+                  <Icon loading name="spinner" />
+                )}
+              </>
+            ) : (
+              <>
+                {!isWeatherLoading && !isLoading ? (
+                  <Card fluid style={{ margin: 0 }}>
+                    <Weather
+                      weather={weather}
+                      unit={unit}
+                      activeTab={activeTab}
+                      country={country}
+                    />
+                  </Card>
+                ) : (
+                  <Icon loading name="spinner" />
+                )}
+              </>
+            )}
           </>
         )}
-      </Card>
-    </Container>
+      </Container>
+    </>
   ) : (
     <>
-      <Icon loading name="spinner" />{' '}
+      <Icon loading name="spinner" />
     </>
   )
 }
