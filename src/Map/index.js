@@ -25,12 +25,12 @@ const MapView = ({ lat, lng }) => {
     <div>
       {!isNaN(lat) ? (
         <ReactMapGL
-          eventRecognizerOptions={{ ...eventRecognizerOptions }}
+          eventRecognizerOptions={eventRecognizerOptions}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
           mapStyle="mapbox://styles/mapbox/streets-v11"
           {...mapStyle}
           {...viewport}
-          onViewportChange={(viewport, mapStyle) => {
+          onViewportChange={(viewport) => {
             setViewport({ ...viewport, latitude: lat, longitude: lng })
           }}
         />

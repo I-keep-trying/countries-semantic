@@ -1,9 +1,3 @@
-## Basic Bare Bones CRA + Semantic-ui
+Heroku deploy instructions (because I forget every time)
 
-### Features:
-
-### - disappear-on-scroll header
-
-### - fixed footer
-
-### - eslint with `jsx-a11y/recommended`
+Delete yarn.lock (because I use npm)
