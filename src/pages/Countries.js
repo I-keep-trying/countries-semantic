@@ -79,33 +79,6 @@ const Countries = () => {
     setActiveItem(name)
   }
 
-  /*   if (filterBySubregion.length === 0) {
-    return (
-      <>
-        <p>no matches</p>
-        <Button onClick={reset}>new search</Button>
-      </>
-    )
-  }
-
-  if (filterBySubregion.length === 1) {
-    if (country !== null) {
-      return !isLoading ? (
-        <Country
-          setInput={setInput}
-          setRegion={setRegion}
-          isLoading={isLoading}
-          country={country}
-          setSubRegion={setSubRegion}
-          setIsLoading={setIsLoading}
-          setActiveItem={setActiveItem}
-        />
-      ) : (
-        <></>
-      )
-    }
-  } */
-
   const getSubregions = regions.filter((r) =>
     r.region === activeItem ? r : ''
   )

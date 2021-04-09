@@ -2,7 +2,6 @@ import React from 'react'
 import { Container } from 'semantic-ui-react'
 import Footer from './components/Footer'
 import Countries from './pages/Countries'
-//import Map from './Map'
 import './App.css'
 
 function App() {

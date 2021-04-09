@@ -15,6 +15,7 @@
     "moment": "^2.29.1",
     "nanoid": "^3.1.22",
     "npm": "^7.5.6",
+    "ol": "^6.5.0",
     "react": "^17.0.1",
     "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.1",

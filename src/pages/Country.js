@@ -16,7 +16,7 @@ import {
 } from 'semantic-ui-react'
 import axios from 'axios'
 import Weather from '../components/Weather'
-import Map from '../Map'
+import MapPage from '../components/pages/MapPage'
 
 const Country = ({
   country,
@@ -34,6 +34,13 @@ const Country = ({
   const [activeTab2, setActiveTab2] = useState('Flag')
   const [location, setLocation] = useState({})
 
+  const [viewport, setViewport] = useState({
+    latitude: 45,
+    longitude: 73,
+    zoom: 7,
+  })
+
+  // Get location coords of each country's capital, to use for weather
   useEffect(() => {
     axios
       .get(
@@ -43,12 +50,10 @@ const Country = ({
         setLocation(res.data.items[0].position)
       })
   }, [country])
-  const lat = Math.round(country.latlng[0])
-  const lng = Math.round(country.latlng[1])
 
   useEffect(() => {
     if (Object.entries(location).length > 0) {
-      const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=minutely,hourly&appid=${process.env.REACT_APP_OPENWEATHER_KEY}&units=${unit}`
+      const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.lng}&exclude=minutely,hourly&appid=${process.env.REACT_APP_OPENWEATHER_KEY}&units=${unit}`
 
       if (
         unit === 'metric' &&
@@ -122,6 +127,14 @@ const Country = ({
     setActiveTab2(name)
   }
 
+  // These coords are for the approximate center of the country, for the map
+  const lat = Math.round(country.latlng[0])
+  const lng = Math.round(country.latlng[1])
+
+  const handleViewportChange = (viewport) => {
+    setViewport({ ...viewport, latitude: lat, longitude: lng })
+  }
+
   return !isLoading ? (
     <>
       <Container>
@@ -144,7 +157,14 @@ const Country = ({
               />
             </Menu>
 
-            <Grid style={{ marginBottom: 25, marginTop: 0, marginLeft: 0, marginRight:0 }}>
+            <Grid
+              style={{
+                marginBottom: 25,
+                marginTop: 0,
+                marginLeft: 0,
+                marginRight: 0,
+              }}
+            >
               {activeTab2 === 'Flag' ? (
                 <Grid.Column>
                   <Grid.Row style={{ marginBottom: 0, marginTop: 10 }}>
@@ -183,7 +203,7 @@ const Country = ({
               ) : (
                 <Grid.Column style={{ padding: 0, marginLeft: 0 }}>
                   <Container style={{ width: '40vw', height: '45vh' }}>
-                    <Map lat={lat} lng={lng} />
+                    <MapPage lat={lat} lng={lng} />
                   </Container>
                 </Grid.Column>
               )}
@@ -228,7 +248,8 @@ const Country = ({
               </Grid.Row>
             </Grid.Column>
             <Grid.Column style={{ padding: 0, marginLeft: -10 }}>
-              <Map lat={lat} lng={lng} />
+           {/*  {String(lat)} , {String(lng)} */}
+              <MapPage lat={lat} lng={lng} />
             </Grid.Column>
           </Grid>
         )}

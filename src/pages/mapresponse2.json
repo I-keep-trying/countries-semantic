@@ -1,0 +1,31 @@
+[{
+  "items": [
+    {
+      "title": "الجزائر, الجزائر",
+      "id": "here:cm:namedplace:27855321",
+      "resultType": "locality",
+      "localityType": "city",
+      "address": {
+        "label": "الجزائر, الجزائر",
+        "countryCode": "DZA",
+        "countryName": "الجزائر",
+        "state": "الجزائر",
+        "county": "سيدي امحمد",
+        "city": "الجزائر"
+      },
+      "position": { "lat": 36.77156, "lng": 3.0593 },
+      "mapView": {
+        "west": 3.03506,
+        "south": 36.73343,
+        "east": 3.08604,
+        "north": 36.78313
+      },
+      "scoring": {
+        "queryScore": 1.0,
+        "fieldScore": { "country": 1.0, "city": 1.0 }
+      }
+    }
+  ]
+},
+{"not included in response object; url": "https://geocode.search.hereapi.com/v1/geocode?q=Algiers,Algeria&apiKey=y6rIycfZLsP5vsH_mk9UjGhBUid0Fidd98A4O9DHsJ4"}
+]

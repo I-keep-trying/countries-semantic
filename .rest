@@ -1,0 +1,4 @@
+GET 
+https://maps.google.com/maps/api/staticmap?center=33.0%2C65.0&zoom=4&size=256x256&language=en&sensor=false&client=google-maps-frontend&signature=2njcr9ctPo-nN9uZCdhlPRZvqqs
+
+https://maps.google.com/maps/api/staticmap?center=33.0,65.0&zoom=4&size=256x256&language=en&sensor=false&client=google-maps-frontend
