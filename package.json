@@ -11,6 +11,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "fomantic-ui": "^2.8.7",
     "install": "^0.13.0",
     "moment": "^2.29.1",
     "nanoid": "^3.1.22",
@@ -31,6 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-semantic": "gulp build-css build-assets",
+    "watch-semantic": "build-semantic && gulp watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

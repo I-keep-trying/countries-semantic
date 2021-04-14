@@ -243,7 +243,7 @@
     "id": "01R281hQk3OgsYm1bbHgc",
     "name": "Bouvet Island",
     "capital": "",
-    "region": "",
+    "region": "Other",
     "subregion": "",
     "flag": "https://restcountries.eu/data/bvt.svg"
   },
@@ -787,7 +787,7 @@
     "id": "aFud6khAYQnUnzSa0zvmY",
     "name": "Heard Island and McDonald Islands",
     "capital": "",
-    "region": "",
+    "region": "Other",
     "subregion": "",
     "flag": "https://restcountries.eu/data/hmd.svg"
   },

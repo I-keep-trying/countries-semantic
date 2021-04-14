@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Map from '../Map/Map'
-import { Layers, TileLayer } from '../Layers'
+import TileLayer from '../Layers/TileLayer'
 import Controls from '../Controls'
 import { fromLonLat } from 'ol/proj'
 import * as olSource from 'ol/source'
@@ -20,19 +20,17 @@ const MapPage = ({ lat, lng }) => {
   return !loading ? (
     <>
       <Map center={fromLonLat(center)}>
-        <Layers>
-          <TileLayer
-            name="Map"
-            description="open street map"
-            source={source}
-            zIndex={0}
-          />
-        </Layers>
+        <TileLayer
+          name="Map"
+          description="open street map"
+          source={source}
+          zIndex={0}
+        />
         <Controls />
       </Map>
     </>
   ) : (
-    <>Loading...</>
+    <>Map Loading...</>
   )
 }
 

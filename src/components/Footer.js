@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu, Header } from 'semantic-ui-react'
+import { Menu, Header, Icon } from 'semantic-ui-react'
 
 const Footer = () => {
   return (
@@ -7,6 +7,12 @@ const Footer = () => {
       <Menu fixed="bottom" className="ui fluid three item menu">
         <Menu.Item>
           <Header as="h6">Made by Andrea Crego</Header>
+        </Menu.Item>
+        <Menu.Item
+          as="a"
+          href="https://github.com/I-keep-trying/countries-semantic"
+        >
+          <Icon name="github" size="big" />
         </Menu.Item>
       </Menu>
     </>

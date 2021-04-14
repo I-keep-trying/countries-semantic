@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './Map.css'
 import 'ol/ol.css'
-import MapContext from './MapContext'
+//import MapContext from './MapContext'
 import * as ol from 'ol'
+
+const MapContext = new React.createContext(null);
 
 const Map = ({ children, center }) => {
   const [map, setMap] = useState(null)

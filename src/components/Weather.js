@@ -1,6 +1,6 @@
 import React from 'react'
-import { isMobile } from 'react-device-detect'
-import { Segment } from 'semantic-ui-react'
+import { isMobile, isTablet } from 'react-device-detect'
+import { Container, Segment } from 'semantic-ui-react'
 import moment from 'moment'
 import Images from '../images/weather-animated/index'
 import '../owm-left.css'
@@ -16,7 +16,7 @@ function WeatherWidget({ weather, unit, activeItem, country }) {
   const code = weather.current.weather[0].icon
   const icon = Images[code].path
 
-  return isMobile ? (
+  return isMobile || isTablet ? (
     <div className="widget-right weather-right--type1 widget-right--brown">
       <div className="widget-right__header widget-right__header--brown">
         <div className="widget-right__layout">
@@ -116,17 +116,17 @@ function WeatherWidget({ weather, unit, activeItem, country }) {
           </a>
         </div>
       </div>
-      <div
-      >
+      <div>
         <Segment
           style={{ margin: 0, border: 0, boxShadow: 'none' }}
           floated="left"
         >
+          {JSON.stringify(weather.current.weather[0].icon)}
           <div className="weather-left-card__row1">
             <img
-              src={`https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${weather.current.weather[0].icon}.png`}
-              width="128"
-              height="128"
+              //  src={`https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${weather.current.weather[0].icon}.png`}
+              style={{ width: 100, height: 100 }}
+              src={icon}
               alt={`Weather in ${country.name}`}
               className="weather-left-card__img"
             />
