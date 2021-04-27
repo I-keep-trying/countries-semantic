@@ -2,3 +2,6 @@
 .env
 /src/Map/index1.js
 /src/assets/dist
+/world.svg
+/world2.svg
+/src/worldMap.js

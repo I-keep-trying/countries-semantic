@@ -121,10 +121,8 @@ function WeatherWidget({ weather, unit, activeItem, country }) {
           style={{ margin: 0, border: 0, boxShadow: 'none' }}
           floated="left"
         >
-          {JSON.stringify(weather.current.weather[0].icon)}
           <div className="weather-left-card__row1">
             <img
-              //  src={`https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${weather.current.weather[0].icon}.png`}
               style={{ width: 100, height: 100 }}
               src={icon}
               alt={`Weather in ${country.name}`}

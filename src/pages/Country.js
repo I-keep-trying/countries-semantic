@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { isMobile, isTablet } from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 import {
   Divider,
   Menu,
@@ -12,12 +12,11 @@ import {
   Grid,
   Header,
   Item,
-  Flag,
   Breadcrumb,
 } from 'semantic-ui-react'
 import axios from 'axios'
-import Weather from '../Weather'
-import MapPage from './MapPage'
+import Weather from '../components/Weather'
+import '../owm-right.css'
 
 const Country = ({
   unit,
@@ -32,26 +31,17 @@ const Country = ({
   setIsLoading,
   setActiveRegion,
   setActiveSubregion,
-  handleRegionClick,
   isWeatherLoading,
   setIsWeatherLoading,
-  handleUnitButtonClick,
 }) => {
+  console.log('country', country)
   const [weather, setWeather] = useState({})
-  // const [unit, setUnit] = useState('metric')
-  // const [isWeatherLoading, setIsWeatherLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('Flag')
-  const [activeTab2, setActiveTab2] = useState('Flag')
   const [location, setLocation] = useState({})
+  // const [unit, setUnit] = useState('metric')
 
-  const [viewport, setViewport] = useState({
-    latitude: 45,
-    longitude: 73,
-    zoom: 7,
-  })
-
-  // Get location coords of country capital, to use for weather
   useEffect(() => {
+    // Get location coords of country capital, to use for weather
     axios
       .get(
         `https://geocode.search.hereapi.com/v1/geocode?q=${country.capital},${country.name}&apiKey=${process.env.REACT_APP_HERE_KEY}`
@@ -119,35 +109,11 @@ const Country = ({
     setActiveSubregion('')
   }
 
-  /* const handleUnitButtonClick = () => {
-    if (unit === 'metric') {
-      setIsWeatherLoading(true)
-      setUnit('imperial')
-      return true
-    }
-    setIsWeatherLoading(true)
-    setUnit('metric')
-    return false
-  }  */
-
   const handleItemClick = (e, { name }) => {
     setActiveTab(name)
   }
 
-  const handleItemClick2 = (e, { name }) => {
-    setActiveTab2(name)
-  }
-
-  // These coords are for the approximate center of the country, for the map
-  const lat = Math.round(country.latlng[0])
-  const lng = Math.round(country.latlng[1])
-
-  const handleViewportChange = (viewport) => {
-    setViewport({ ...viewport, latitude: lat, longitude: lng })
-  }
-
   const getTimeZones = (country) => {
-    const tzCount = country.timezones.length
     const tzEnd = country.timezones.length - 1
     return country.timezones.length > 1 ? (
       <Grid.Row style={{ padding: 0 }}>
@@ -174,90 +140,109 @@ const Country = ({
     setActiveSubregion(subregion)
   }
 
+  const handleUnitButtonClick = () => {
+    if (unit === 'metric') {
+      setIsWeatherLoading(true)
+      setUnit('imperial')
+      return true
+    }
+    setIsWeatherLoading(true)
+    setUnit('metric')
+    return false
+  }
+
   return !isLoading ? (
     <>
-      <Grid>
-        <Grid.Column floated="left" width={7}>
-          {' '}
-          <Breadcrumb>
-            <Breadcrumb.Section
-              key="All"
-              style={{ cursor: 'pointer' }}
-              link
-              onClick={reset}
-            >
-              All
-            </Breadcrumb.Section>
-            <Breadcrumb.Divider icon="right chevron" />
-            <Breadcrumb.Section
-              key={country.region}
-              style={{ cursor: 'pointer' }}
-              link
-              onClick={regionLink}
-            >
-              {country.region}
-            </Breadcrumb.Section>
-            {country.subregion !== '' ? (
-              <>
-                <Breadcrumb.Divider icon="right chevron" />
-                <Breadcrumb.Section
-                  key={country.subregion}
-                  style={{ cursor: 'pointer' }}
-                  link
-                  onClick={subregionLink}
-                >
-                  {country.subregion}
-                </Breadcrumb.Section>
-              </>
-            ) : (
-              <></>
-            )}
-            <Breadcrumb.Divider icon="right chevron" />
-            <Breadcrumb.Section key={country.name} active>
-              {country.name}
-            </Breadcrumb.Section>
-          </Breadcrumb>
-        </Grid.Column>
-        <Grid.Column
-          style={{ marginRight: 20 }}
-          width={6}
-          floated="right"
-          textAlign="right"
+      <Menu
+        secondary
+        style={{
+          paddingLeft: 10,
+          paddingRight: 10,
+          paddingTop: 0,
+          paddingBottom: 10,
+          marginBottom: 0,
+        }}
+      >
+        <Breadcrumb
+          size={isMobile ? 'mini' : 'small'}
+          style={
+            isMobile
+              ? { paddingLeft: 3, paddingTop: 4 }
+              : { marginLeft: 10, paddingTop: 4 }
+          }
         >
-          {' '}
-          {/*   <Button.Group>
+          <Breadcrumb.Section
+            key="All"
+            style={{ cursor: 'pointer' }}
+            link
+            onClick={reset}
+          >
+            All
+          </Breadcrumb.Section>
+          <Breadcrumb.Divider icon="right chevron" />
+          <Breadcrumb.Section
+            key={country.region}
+            style={{ cursor: 'pointer' }}
+            link
+            onClick={regionLink}
+          >
+            {country.region}
+          </Breadcrumb.Section>
+          {country.subregion !== '' ? (
             <>
-              <Button
-                basic={unit === 'metric' ? false : true}
-                color="black"
-                onClick={handleUnitButtonClick}
+              <Breadcrumb.Divider icon="right chevron" />
+              <Breadcrumb.Section
+                key={country.subregion}
+                style={{ cursor: 'pointer' }}
+                link
+                onClick={subregionLink}
               >
-                Metric
-              </Button>
-              <Button.Or />
-              <Button
-                basic={unit === 'metric' ? true : false}
-                color="black"
-                onClick={handleUnitButtonClick}
-              >
-                American <Flag name="us" />
-              </Button>
+                {country.subregion}
+              </Breadcrumb.Section>
             </>
-          </Button.Group> */}
-        </Grid.Column>
-      </Grid>
+          ) : (
+            <></>
+          )}
+          <Breadcrumb.Divider icon="right chevron" />
+          <Breadcrumb.Section key={country.name} active>
+            {country.name}
+          </Breadcrumb.Section>
+        </Breadcrumb>
+        <Menu.Item
+          position="right"
+          style={{
+            padding: 0,
+          }}
+        >
+          <Button.Group attached="bottom">
+            <Button
+              size={isMobile ? `mini` : `medium`}
+              basic={unit === 'metric' ? false : true}
+              color="black"
+              onClick={handleUnitButtonClick}
+              style={{ padding: 4 }}
+            >
+              Metric
+            </Button>
+            <Button
+              size={isMobile ? `mini` : `medium`}
+              basic={unit === 'metric' ? true : false}
+              color="black"
+              onClick={handleUnitButtonClick}
+              style={{ padding: 4 }}
+            >
+              Imperial
+            </Button>
+          </Button.Group>
+        </Menu.Item>
+      </Menu>
 
-      <Container>
-        <Menu tabular>
+      <Container fluid style={isMobile ? { padding: 4 } : { padding: 14 }}>
+        <Menu pointing secondary>
           <Menu.Item
-            active
+            //  active
             name="Flag"
             active={activeTab === 'Flag'}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="Map"
-            active={activeTab === 'Map'}
             onClick={handleItemClick}
           />
           <Menu.Item
@@ -279,12 +264,11 @@ const Country = ({
         ) : (
           <></>
         )}
-        {activeTab === 'Map' && !isLoading ? <>Map</> : <></>}
         {activeTab === 'Details' && !isLoading ? (
           <Card fluid style={{ margin: 0 }}>
-            <Grid style={{ margin: 0 }} columns={4}>
+            <Grid style={{ margin: 0 }} columns={isMobile ? 2 : 4}>
               <Grid.Row>
-                <Grid.Column>
+                <Grid.Column style={{ paddingRight: 4 }}>
                   <Item.Group relaxed>
                     <Item style={{ margin: 0 }}>
                       <Item.Content>
@@ -320,7 +304,7 @@ const Country = ({
                   </Item.Group>
                 </Grid.Column>
 
-                <Grid.Column>
+                <Grid.Column style={{ paddingLeft: 0 }}>
                   <Item.Group relaxed>
                     <Item style={{ margin: 0 }}>
                       <Item.Content>
@@ -330,52 +314,94 @@ const Country = ({
                     </Item>
                   </Item.Group>
                 </Grid.Column>
-                {country.area !== null ? (
-                  <Grid.Column>
-                    <Item.Group relaxed>
-                      <Item style={{ margin: 0 }}>
-                        <Item.Content>
-                          <Item.Header>Size</Item.Header>
-                          <Item.Description>
-                            {unit === 'metric'
-                              ? ` ${country.area.toLocaleString()} km²`
-                              : ` ${Math.round(
-                                  country.area * 1.609
-                                ).toLocaleString()} mi²`}
-                          </Item.Description>
-                        </Item.Content>
-                      </Item>
-                    </Item.Group>
-                  </Grid.Column>
+
+                {isMobile ? (
+                  <></>
                 ) : (
-                  <Grid.Column>
-                    <Item.Group relaxed>
-                      <Item style={{ margin: 0 }}>
-                        <Item.Content>
-                          <Item.Header>Size</Item.Header>
-                          <Item.Description>Not provided.</Item.Description>
-                        </Item.Content>
-                      </Item>
-                    </Item.Group>
-                  </Grid.Column>
+                  <>
+                    <Grid.Column style={{ paddingRight: 4 }}>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Size</Item.Header>
+                            {country.area !== null ? (
+                              <Item.Description>
+                                {unit === 'metric'
+                                  ? ` ${country.area.toLocaleString()} km²`
+                                  : ` ${Math.round(
+                                      country.area * 1.609
+                                    ).toLocaleString()} mi²`}
+                              </Item.Description>
+                            ) : (
+                              <Item.Description>Not provided.</Item.Description>
+                            )}
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+
+                    <Grid.Column>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Population</Item.Header>
+                            <Item.Description>
+                              {country.population.toLocaleString()}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </>
                 )}
-                <Grid.Column>
-                  <Item.Group relaxed>
-                    <Item style={{ margin: 0 }}>
-                      <Item.Content>
-                        <Item.Header>Population</Item.Header>
-                        <Item.Description>
-                          {country.population.toLocaleString()}
-                        </Item.Description>
-                      </Item.Content>
-                    </Item>
-                  </Item.Group>
-                </Grid.Column>
               </Grid.Row>
+              {isMobile ? (
+                <>
+                  <Divider style={{ margin: 0 }} />
+                  <Grid.Row>
+                    <Grid.Column style={{ paddingRight: 4 }}>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Size</Item.Header>
+                            {country.area !== null ? (
+                              <Item.Description>
+                                {unit === 'metric'
+                                  ? ` ${country.area.toLocaleString()} km²`
+                                  : ` ${Math.round(
+                                      country.area * 1.609
+                                    ).toLocaleString()} mi²`}
+                              </Item.Description>
+                            ) : (
+                              <Item.Description>Not provided.</Item.Description>
+                            )}
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+
+                    <Grid.Column style={{ paddingLeft: 0 }}>
+                      <Item.Group relaxed>
+                        <Item style={{ margin: 0 }}>
+                          <Item.Content>
+                            <Item.Header>Population</Item.Header>
+                            <Item.Description>
+                              {country.population.toLocaleString()}
+                            </Item.Description>
+                          </Item.Content>
+                        </Item>
+                      </Item.Group>
+                    </Grid.Column>
+                  </Grid.Row>
+                </>
+              ) : (
+                <></>
+              )}
             </Grid>
+
             <Divider style={{ margin: 0 }} />
             <Grid style={{ margin: 0 }} columns={2}>
-              <Grid.Column>
+              <Grid.Column style={{ paddingRight: 4 }}>
                 <Item.Group relaxed>
                   <Item style={{ margin: 0 }}>
                     <Item.Content>
@@ -391,7 +417,7 @@ const Country = ({
                   </Item>
                 </Item.Group>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column style={{ paddingLeft: 0 }}>
                 <Item.Group relaxed>
                   <Item style={{ margin: 0 }}>
                     <Item.Content>
@@ -410,9 +436,9 @@ const Country = ({
                 <Header>Currencies</Header>
               </Grid.Row>
 
-              <Grid.Column>
+              <Grid.Column style={{ paddingRight: 4 }}>
                 <Item.Group>
-                  <Item>
+                  <Item style={isMobile ? { margin: 0 } : {}}>
                     <Item.Content>
                       <Item.Header> Symbol</Item.Header>
                       <Item.Description>
@@ -430,9 +456,9 @@ const Country = ({
                   </Item>
                 </Item.Group>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Item.Group>
-                  <Item>
+                  <Item style={isMobile ? { margin: 0 } : {}}>
                     <Item.Content>
                       <Item.Header> Code</Item.Header>
                       <Item.Description>
@@ -450,9 +476,9 @@ const Country = ({
                   </Item>
                 </Item.Group>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column style={{ paddingLeft: 0 }}>
                 <Item.Group>
-                  <Item>
+                  <Item style={isMobile ? { margin: 0 } : {}}>
                     <Item.Content>
                       <Item.Header>Name</Item.Header>
                       <Item.Description>

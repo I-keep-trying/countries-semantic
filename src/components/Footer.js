@@ -4,9 +4,9 @@ import { Menu, Header, Icon } from 'semantic-ui-react'
 const Footer = () => {
   return (
     <>
-      <Menu fixed="bottom" className="ui fluid three item menu">
+      <Menu fixed="bottom" className="ui fluid two item menu">
         <Menu.Item>
-          <Header as="h6">Made by Andrea Crego</Header>
+          <Header as="h5">Made by Andrea Crego</Header>
         </Menu.Item>
         <Menu.Item
           as="a"
